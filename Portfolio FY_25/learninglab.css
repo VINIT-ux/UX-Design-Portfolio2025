@@ -1,0 +1,594 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Instrument Sans;
+    /* background-color: var(--primary-1); */
+}
+
+/* Root Variables */
+:root {
+    --primary-1: #FFFCF4;
+    --primary-2: #c91f1a;
+    --secondary-color: #10375C;
+    --c1: #EB8317;
+    --c2: #F3C623;
+    --white: #FFFFFF;
+    --black: #0E0E0E;
+    --primary-font: Instrument Sans;
+    --font-size: 1.5rem;
+}
+.lrnlab {
+    position: absolute; /* Use absolute positioning */
+    top: 5%; /* Adds top margin */
+    left: 50%; /* Centers horizontally */
+    transform: translateX(-50%); /* Centers by shifting left by 50% of its width */
+    width: 100%; /* Full width for responsiveness */
+    max-width: 800px; /* Optional max-width for larger screens */
+    height: auto; /* Adjust height based on content */
+    min-height: 80vh; /* Ensures a minimum height for balance */
+    text-align: left; /* Keeps content left-aligned */
+    margin: 0 auto; /* Centers the .lrnlab container */
+}
+
+/* Container for the title and content */
+.lrnlab .title {
+    width: 100%; /* Adjust width for better responsiveness */
+    margin-left: 0; /* Reset left margin for smaller screens */
+}
+
+/* Style for the main title paragraph */
+.lrnlab .title p {
+    font-family: IBM Plex Mono, monospace; /* Monospace font for the text */
+    font-size: 3rem; /* Adjust font size in rem for responsiveness */
+    line-height: 1.5; /* Adjust line spacing for readability */
+    color: var(--secondary-color); /* Primary text color from root variables */
+    text-align: left; /* Keep left-aligned */
+    margin-bottom: 0.5rem; /* Add spacing below the paragraph */
+}
+
+/* Style for the "for foodies" part */
+.lrnlab .title p span {
+    display: block; /* Places "for foodies" on a new line */
+    font-family: IBM Plex Mono, monospace; /* Accent font */
+    color: var(--secondary-color); /* Accent color */
+    font-weight: bold; /* Makes the text bold */
+    font-size: 4rem; /* Increases the font size for emphasis */
+    margin-top: -0.2rem; /* Adds spacing above "for foodies" */
+    text-align: left; /* Keep it left-aligned */
+    line-height: 1;
+}
+
+.lrnlab .des p {
+    font-family: Instrument Sans;
+    font-size: var(--font-size);
+    color: var(--secondary-color);
+    margin-top: 5rem;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 768px) {
+    .lrnlab {
+        width: 90%; /* Adjust width for medium screens */
+        left: 50%;
+        transform: translateX(-50%); /* Keep it centered */
+    }
+
+    .lrnlab .title p {
+        font-size: 2.4rem; /* Adjust font size for smaller screens */
+    }
+
+    .lrnlab .title p span {
+        font-size: 3rem; /* Reduce font size for emphasis */
+    }
+
+    .lrnlab .des p {
+        font-size: 1.8rem; /* Reduce font size for description */
+        margin-top: 3rem; /* Reduce the top margin for better spacing */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .lrnlab {
+        width: 100%; /* Full width for small screens */
+        max-width: 100%; /* Ensures no overflow */
+    }
+
+    .lrnlab .title{
+        padding: 0 6%;
+    }
+
+    .lrnlab .title p {
+        font-size: 2rem; /* Smaller font size */
+    }
+
+    .lrnlab .title p span {
+        font-size: 2.5rem; /* Smaller font size for emphasis */
+    }
+
+    .lrnlab .des p {
+        font-size: 1.6rem; /* Further reduce font size */
+        margin-top: 2rem; /* Adjust top margin */
+    }
+}
+
+.books {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-top: 3rem;
+    max-width: 644px;
+}
+
+.booktitle {
+    margin-top: 1rem;
+    max-width: 644px;
+}
+
+/* Responsive image styling */
+.books img {
+    margin-right: 1.2rem;
+    margin-bottom: 2rem;
+    width: 100%; /* Make images responsive */
+    max-width: 400px; /* Limit max width */
+    height: auto;
+}
+
+.learning {
+    width: 644px;
+}
+
+.lrnlab .books .booktitle b {
+    font-size: 2rem;
+    color: var(--secondary-color);
+}
+
+.lrnlab .books .booktitle ul li {
+    font-size: var(--font-size);
+    color: var(--secondary-color);
+    margin-left: 2rem;
+    margin-top: 0.5rem;
+    margin-bottom: 3rem;
+    font-style: italic;
+}
+
+.lrnlab .books .booktitle .learning b {
+    font-size: var(--font-size);
+}
+
+.lrnlab .books .booktitle .learning p {
+    margin-top: 1rem;
+    font-size: var(--font-size);
+    text-align: justify;
+    font-family: Instrument Sans;
+    width: 100%; /* Adjust width for smaller screens */
+    line-height: 1.95rem;
+}
+
+/* Button sections */
+.bt_top {
+    margin-top: 1rem;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-wrap: wrap; /* Allow buttons to wrap */
+}
+
+.bt_btm {
+    margin-top: 2.4rem;
+    margin-bottom: 2.4rem;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-wrap: wrap; /* Allow buttons to wrap */
+}
+
+.lrnlab .bt_top .bt1 b {
+    padding: 1rem;
+    margin-right: 0.5rem;
+    color: var(--primary-1);
+    background-color: var(--secondary-color);
+    border-radius: 0.4rem;
+}
+
+.lrnlab .bt_top .bt2 b {
+    padding: 1rem;
+    color: var(--primary-1);
+    background-color: var(--c1);
+    border-radius: 0.4rem;
+}
+
+.lrnlab .bt_btm .bt3 b {
+    padding: 1rem;
+    margin-right: 0.5rem;
+    color: var(--secondary-color);
+    background-color: var(--c2);
+    border-radius: 0.4rem;
+}
+
+.lrnlab .bt_btm .bt4 b {
+    padding: 1rem;
+    color: var(--white);
+    background-color: var(--primary-2);
+    border-radius: 0.4rem;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+    .books {
+        flex-direction: column; /* Stack books vertically on smaller screens */
+        align-items: center; /* Center-align books */
+        max-width: 100%; /* Ensure it uses full width on smaller screens */
+    }
+
+    .learning {
+        width: 100%; /* Adjust learning section width */
+    }
+
+    .lrnlab .books .booktitle .learning p {
+        width: 100%; /* Adjust paragraph width */
+    }
+
+    .lrnlab .bt_top,
+    .lrnlab .bt_btm {
+        flex-direction: column; /* Stack buttons vertically on smaller screens */
+        gap: 2rem;
+    }
+
+    .lrnlab .bt_top .bt1 b,
+    .lrnlab .bt_top .bt2 b,
+    .lrnlab .bt_btm .bt3 b,
+    .lrnlab .bt_btm .bt4 b {
+        margin-bottom: 1rem; /* Add spacing between buttons */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .books img {
+        max-width: 100%; /* Ensure images take full width */
+    }
+
+    .lrnlab .books .booktitle b {
+        font-size: 1.8rem; /* Reduce font size */
+    }
+
+    .lrnlab .books .booktitle ul li {
+        font-size: 1.6rem; /* Smaller font size for list items */
+    }
+
+    .lrnlab .bt_top .bt1 b,
+    .lrnlab .bt_top .bt2 b,
+    .lrnlab .bt_btm .bt3 b,
+    .lrnlab .bt_btm .bt4 b {
+        padding: 0.8rem; /* Reduce padding for buttons */
+    }
+}
+
+.new-books {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-top: 3rem;
+    max-width: 644px;
+}
+
+.new-booktitle {
+    margin-top: 1rem;
+    max-width: 644px;
+}
+
+/* Responsive image styling */
+.new-books img {
+    margin-right: 1.2rem;
+    margin-bottom: 2rem;
+    width: 100%; /* Make images responsive */
+    max-width: 400px; /* Limit max width */
+    height: auto;
+}
+
+.new-learning {
+    width: 644px;
+}
+
+.lrnlab .new-books .new-booktitle b {
+    font-size: 2rem;
+    color: var(--secondary-color);
+}
+
+.lrnlab .new-books .new-booktitle ul li {
+    font-size: var(--font-size);
+    color: var(--secondary-color);
+    margin-left: 2rem;
+    margin-top: 0.5rem;
+    margin-bottom: 3rem;
+    font-style: italic;
+}
+
+.lrnlab .new-books .new-booktitle .new-learning b {
+    font-size: var(--font-size);
+}
+
+.lrnlab .new-books .new-booktitle .new-learning p {
+    margin-top: 1rem;
+    font-size: var(--font-size);
+    text-align: justify;
+    font-family: Instrument Sans;
+    width: 100%; /* Adjust width for smaller screens */
+    line-height: 1.95rem;
+}
+
+/* Button sections */
+.new-bt-top {
+    margin-top: 1rem;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-wrap: wrap; /* Allow buttons to wrap */
+}
+
+.new-bt-btm {
+    margin-top: 2.4rem;
+    margin-bottom: 2.4rem;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-wrap: wrap; /* Allow buttons to wrap */
+}
+
+.lrnlab .new-bt-top .new-bt1 b {
+    padding: 1rem;
+    margin-right: 0.5rem;
+    color: var(--primary-1);
+    background-color: var(--secondary-color);
+    border-radius: 0.4rem;
+}
+
+.lrnlab .new-bt-top .new-bt2 b {
+    padding: 1rem;
+    color: var(--primary-1);
+    background-color: var(--c1);
+    border-radius: 0.4rem;
+}
+
+.lrnlab .new-bt-btm .new-bt3 b {
+    padding: 1rem;
+    margin-right: 0.5rem;
+    color: var(--secondary-color);
+    background-color: var(--c2);
+    border-radius: 0.4rem;
+}
+
+.lrnlab .new-bt-btm .new-bt4 b {
+    padding: 1rem;
+    color: var(--white);
+    background-color: var(--primary-2);
+    border-radius: 0.4rem;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+    .new-books {
+        flex-direction: column; /* Stack books vertically on smaller screens */
+        align-items: center; /* Center-align books */
+        max-width: 100%; /* Ensure it uses full width on smaller screens */
+    }
+
+    .new-learning {
+        width: 100%; /* Adjust learning section width */
+    }
+
+    .lrnlab .new-books .new-booktitle .new-learning p {
+        width: 100%; /* Adjust paragraph width */
+    }
+
+    .lrnlab .new-bt-top,
+    .lrnlab .new-bt-btm {
+        flex-direction: column; /* Stack buttons vertically on smaller screens */
+        gap: 2rem;
+    }
+
+    .lrnlab .new-bt-top .new-bt1 b,
+    .lrnlab .new-bt-top .new-bt2 b,
+    .lrnlab .new-bt-btm .new-bt3 b,
+    .lrnlab .new-bt-btm .new-bt4 b {
+        margin-bottom: 1rem; /* Add spacing between buttons */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .new-books img {
+        max-width: 100%; /* Ensure images take full width */
+    }
+
+    .lrnlab .new-books .new-booktitle b {
+        font-size: 1.8rem; /* Reduce font size */
+    }
+
+    .lrnlab .new-books .new-booktitle ul li {
+        font-size: 1.6rem; /* Smaller font size for list items */
+    }
+
+    .lrnlab .new-bt-top .new-bt1 b,
+    .lrnlab .new-bt-top .new-bt2 b,
+    .lrnlab .new-bt-btm .new-bt3 b,
+    .lrnlab .new-bt-btm .new-bt4 b {
+        padding: 0.8rem; /* Reduce padding for buttons */
+    }
+}
+
+.new-books, .book-three, .book-four {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-top: 3rem;
+    max-width: 644px;
+}
+
+.new-booktitle, .book-three-title, .book-four-title {
+    margin-top: 1rem;
+    max-width: 644px;
+}
+
+/* Image styling for all three book sections */
+.new-books img, .book-three img, .book-four img {
+    margin-right: 1.2rem;
+    margin-bottom: 2rem;
+    width: 100%; /* Ensure images are responsive */
+    max-width: 400px; /* Limit image width */
+    height: auto;
+}
+
+.new-learning, .book-three-learning, .book-four-learning {
+    width: 644px;
+}
+
+/* Title styling */
+.lrnlab .new-books .new-booktitle b,
+.lrnlab .book-three .book-three-title b,
+.lrnlab .book-four .book-four-title b {
+    font-size: 2rem;
+    color: var(--secondary-color);
+}
+
+.lrnlab .new-books .new-booktitle ul li,
+.lrnlab .book-three .book-three-title ul li,
+.lrnlab .book-four .book-four-title ul li {
+    font-size: var(--font-size);
+    color: var(--secondary-color);
+    margin-left: 2rem;
+    margin-top: 0.5rem;
+    margin-bottom: 3rem;
+    font-style: italic;
+}
+
+.lrnlab .new-books .new-booktitle .new-learning b,
+.lrnlab .book-three .book-three-title .book-three-learning b,
+.lrnlab .book-four .book-four-title .book-four-learning b {
+    font-size: var(--font-size);
+}
+
+.lrnlab .new-books .new-booktitle .new-learning p,
+.lrnlab .book-three .book-three-title .book-three-learning p,
+.lrnlab .book-four .book-four-title .book-four-learning p {
+    margin-top: 1rem;
+    font-size: var(--font-size);
+    text-align: justify;
+    font-family: Instrument Sans;
+    width: 100%; /* Adjust width for responsiveness */
+    max-width: 600px; /* Set max-width */
+    line-height: 1.95rem;
+}
+
+/* Button styling for different sections */
+.new-bt-top, .book-three-bt-top, .book-four-bt-top {
+    margin-top: 2rem;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-wrap: wrap; /* Allow buttons to wrap on smaller screens */
+}
+
+.new-bt-btm, .book-three-bt-btm, .book-four-bt-btm {
+    margin-top: 2.4rem;
+    margin-bottom: 2.4rem;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-wrap: wrap; /* Allow buttons to wrap on smaller screens */
+}
+
+/* Button styling */
+.lrnlab .new-bt-top .new-bt1 b,
+.lrnlab .book-three-bt-top .book-three-bt1 b,
+.lrnlab .book-four-bt-top .book-four-bt1 b {
+    padding: 1rem;
+    margin-right: 0.5rem;
+    color: var(--primary-1);
+    background-color: var(--secondary-color);
+    border-radius: 0.4rem;
+}
+
+.lrnlab .new-bt-top .new-bt2 b,
+.lrnlab .book-three-bt-top .book-three-bt2 b,
+.lrnlab .book-four-bt-top .book-four-bt2 b {
+    padding: 1rem;
+    color: var(--primary-1);
+    background-color: var(--c1);
+    border-radius: 0.4rem;
+}
+
+.lrnlab .new-bt-btm .new-bt3 b,
+.lrnlab .book-three-bt-btm .book-three-bt3 b,
+.lrnlab .book-four-bt-btm .book-four-bt3 b {
+    padding: 1rem;
+    margin-right: 0.5rem;
+    color: var(--secondary-color);
+    background-color: var(--c2);
+    border-radius: 0.4rem;
+}
+
+.lrnlab .new-bt-btm .new-bt4 b,
+.lrnlab .book-three-bt-btm .book-three-bt4 b,
+.lrnlab .book-four-bt-btm .book-four-bt4 b {
+    padding: 1rem;
+    color: var(--white);
+    background-color: var(--primary-2);
+    border-radius: 0.4rem;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+    .new-books, .book-three, .book-four {
+        flex-direction: column; /* Stack sections vertically on smaller screens */
+        align-items: center;
+    }
+
+    .new-learning, .book-three-learning, .book-four-learning {
+        width: 100%; /* Adjust width */
+    }
+
+    .lrnlab .new-books .new-booktitle .new-learning p,
+    .lrnlab .book-three .book-three-title .book-three-learning p,
+    .lrnlab .book-four .book-four-title .book-four-learning p {
+        width: 100%; /* Ensure the text uses the full width */
+    }
+
+    .new-bt-top, .book-three-bt-top, .book-four-bt-top,
+    .new-bt-btm, .book-three-bt-btm, .book-four-bt-btm {
+        flex-direction: column; /* Stack buttons vertically */
+        gap: 2.5rem;
+        width: max-content;
+    }
+
+    .lrnlab .new-bt-top .new-bt1 b,
+    .lrnlab .new-bt-top .new-bt2 b,
+    .lrnlab .new-bt-btm .new-bt3 b,
+    .lrnlab .new-bt-btm .new-bt4 b {
+        margin-bottom: 1rem; /* Add spacing between buttons */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .new-books img, .book-three img, .book-four img {
+        max-width: 100%; /* Ensure images take full width */
+    }
+
+    .lrnlab .new-books .new-booktitle b,
+    .lrnlab .book-three .book-three-title b,
+    .lrnlab .book-four .book-four-title b {
+        font-size: 1.8rem; /* Reduce font size */
+    }
+
+    .lrnlab .new-books .new-booktitle ul li,
+    .lrnlab .book-three .book-three-title ul li,
+    .lrnlab .book-four .book-four-title ul li {
+        font-size: 1.6rem; /* Smaller font size for list items */
+    }
+
+    .lrnlab .new-bt-top .new-bt1 b,
+    .lrnlab .new-bt-top .new-bt2 b,
+    .lrnlab .new-bt-btm .new-bt3 b,
+    .lrnlab .new-bt-btm .new-bt4 b {
+        padding: 0.8rem; /* Reduce padding for buttons */
+    }
+}

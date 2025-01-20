@@ -1,0 +1,1020 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Instrument Sans;
+    /* background-color: var(--primary-1); */
+}
+
+/* Root Variables */
+:root {
+    --primary-1: #FFFCF4;
+    --primary-2: #FFFAED;
+    --secondary-color: #10375C;
+    --c1: #EB8317;
+    --c2: #F3C623;
+    --white: #FFFFFF;
+    --black: #0E0E0E;
+    --primary-font: Instrument Sans;
+    --font-size: 1.5rem;
+}
+.ga {
+    position: absolute; /* Use absolute positioning */
+    top: 5%; /* Adds top margin */
+    left: 50%; /* Centers horizontally */
+    transform: translateX(-50%); /* Centers by shifting left by 50% of its width */
+    width: 100%; /* Adjust width for smaller screens */
+    max-width: 800px; /* Optional max-width for larger screens */
+    height: auto; /* Adjust height based on content */
+    min-height: 80vh; /* Ensures a minimum height for balance */
+    text-align: left; /* Keeps content left-aligned */
+    margin: 0 auto; /* Adds horizontal centering and vertical spacing */
+    margin-top: 6rem;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Instrument Sans;
+    /* background-color: var(--primary-1); */
+  }
+  
+  /* Root Variables */
+  :root {
+    --primary-1: #FFFCF4;
+    --primary-2: #FFFAED;
+    --secondary-color: #10375C;
+    --c1: #EB8317;
+    --c2: #F3C623;
+    --white: #FFFFFF;
+    --black: #0E0E0E;
+    --primary-font: Instrument Sans;
+    --font-size: 1.5rem;
+  }
+  /* Main cursor */
+  .cursor {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 15px;
+    height: 15px;
+    background-color: var(--c2);
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 1000;
+    transform: translate(-50%, -50%);
+    transition: transform 0.1s ease-out;
+  }
+  
+  /* Trailing circle */
+  .cursor-trail {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 30px;
+    height: 30px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid var(--secondary-color);
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 999;
+    transform: translate(-50%, -50%);
+    transition: transform 0.2s ease;
+  }
+  
+  
+  /* Ripple animation */
+  @keyframes ripple {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(5);
+        opacity: 0;
+    }
+  }
+  
+  /* Larger cursor on hover */
+  .cursor.hover {
+    transform: scale(3); /* Makes the cursor bigger */
+    box-shadow: 0 0 15px var(--secondary-color), 0 0 30px var(--secondary-color);
+  }
+  
+  nav{
+    margin-top: 2rem;
+    position: relative;
+    margin-bottom: 1rem;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    height: 70px;
+    background-color: var(--white);
+    z-index: 99;
+  }
+  nav .navbar{
+    height: 100%;
+    max-width: 1250px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: auto;
+    /* background: red; */
+    padding: 0 50px;
+  }
+
+  nav .logo{
+    margin-left: 0.4rem;
+  }
+
+  nav .logo a{
+    font-size: 1.4rem;
+    font-weight: 800;
+    color: var(--secondary-color);
+    cursor: pointer;
+    text-decoration: none;
+  }
+
+  nav .logo a:hover{
+    color: var(--c1);
+  }
+
+  nav .logo span{
+    color: var(--secondary-color);
+  }
+  
+  .cv {
+    position: relative;
+    right: 0;
+    margin-right: 0;
+    order: 2;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    background-color: var(--secondary-color);
+    border: 0.125rem solid var(--secondary-color);
+    padding: 0.375rem 0.5rem;
+    border-radius: 0.75rem;
+    font-weight: 600;
+    cursor: pointer;
+    border-color: var(--secondary-color);
+    color: var(--primary-1);
+    box-shadow: 0.25rem 0.25rem 0 var(--secondary-color);
+    font-weight: 600;
+    transition: all 0.4s ease;
+    order: 2;
+  }
+  
+  .cv:hover {
+    border-color: var(--secondary-color);
+    color: var(--primary-1);
+    background-color: var(--c1);
+    box-shadow: 0.25rem 0.25rem 0 var(--secondary-color);
+    font-weight: 600;
+  }
+  
+  .cv img {
+    width: 2.75rem;
+    height: 2.75rem;
+    margin-right: 0.5rem;
+  }
+  
+  .logo:hover {
+    color: var(--c1);
+  }
+
+.logo{
+  text-decoration: none;
+}
+
+  nav .navbar .nav-links{
+    line-height: 70px;
+    height: 100%;
+  }
+  nav .navbar .links{
+    display: flex;
+  }
+  nav .navbar .links li{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    list-style: none;
+    padding: 0 14px;
+    border-radius: 6px;
+  }
+  
+  nav .navbar .links li a{
+    height: 100%;
+    text-decoration: none;
+    white-space: nowrap;
+    color: var(--secondary-color);
+    font-size: 15px;
+    font-weight: 500;
+  }
+  nav .navbar .links li a:hover{
+    color: var(--c1);
+  }
+  
+  .links li:hover .htmlcss-arrow,
+  .links li:hover .js-arrow{
+    transform: rotate(180deg);
+    color: var(--c1);
+    }
+  
+  nav .navbar .links li .arrow{
+    /* background: red; */
+    height: 100%;
+    width: 22px;
+    line-height: 70px;
+    text-align: center;
+    display: inline-block;
+    color: var(--secondary-color);
+    transition: all 0.3s ease;
+  }
+  nav .navbar .links li .sub-menu{
+    position: absolute;
+    top: 70px;
+    left: 0;
+    line-height: 40px;
+    background: var(--secondary-color);
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+    border-radius: 0 0 24px 24px;
+    display: none;
+    z-index: 2;
+  }
+  
+  nav .navbar .links li:hover .htmlCss-sub-menu,
+  nav .navbar .links li:hover .js-sub-menu{
+    display: block;
+  }
+  .navbar .links li .sub-menu li{
+    padding: 0 22px;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+  }
+  .navbar .links li .sub-menu a{
+    color: var(--primary-1);
+    font-size: 15px;
+    font-weight: 500;
+  }
+  .navbar .links li .sub-menu .more-arrow{
+    line-height: 40px;
+  }
+  
+  .navbar .links li .sub-menu .more-sub-menu{
+    position: absolute;
+    top: 0;
+    left: 100%;
+    border-radius: 0 4px 4px 4px;
+    z-index: 1;
+    display: none;
+  }
+  .links li .sub-menu .more:hover .more-sub-menu{
+    display: block;
+  }
+  .navbar .search-box{
+    position: relative;
+     height: 40px;
+    width: 40px;
+  }
+  .navbar .search-box i{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    line-height: 40px;
+    text-align: center;
+    font-size: 22px;
+    color: var(--secondary-color);
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  .navbar .search-box .input-box{
+    position: absolute;
+    right: calc(100% - 40px);
+    top: 80px;
+    height: 60px;
+    width: 300px;
+    background: var(--secondary-color);
+    border-radius: 6px;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.4s ease;
+  }
+  .navbar.showInput .search-box .input-box{
+    top: 65px;
+    opacity: 1;
+    pointer-events: auto;
+    background: var(--secondary-color);
+  }
+  .search-box .input-box::before{
+    content: '';
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    background: var(--secondary-color);
+    right: 10px;
+    top: -6px;
+    transform: rotate(45deg);
+  }
+  .search-box .input-box input{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border-radius: 4px;
+    transform: translate(-50%, -50%);
+    height: 35px;
+    width: 280px;
+    outline: none;
+    padding: 0 15px;
+    font-size: 16px;
+    border: none;
+  }
+  .navbar .nav-links .sidebar-logo{
+    display: none;
+  }
+  .navbar .bx-menu{
+    display: none;
+  }
+  @media (max-width:920px) {
+    nav .navbar{
+      max-width: 100%;
+      padding: 0 25px;
+    }
+  
+    nav .navbar .logo a{
+      font-size: 1.2rem;
+      font-weight: 800;
+    }
+    nav .navbar .links li{
+      padding: 0 10px;
+      white-space: nowrap;
+    }
+    nav .navbar .links li a{
+      font-size: 15px;
+    }
+  }
+  @media (max-width:800px){
+  
+    .navbar .bx-menu{
+      display: block;
+    }
+    nav .navbar .nav-links{
+      position: fixed;
+      top: 0;
+      left: -100%;
+      display: block;
+      max-width: 270px;
+      width: 100%;
+      background:  var(--primary-2);
+      line-height: 40px;
+      padding: 20px;
+      box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+      transition: all 0.5s ease;
+      z-index: 1000;
+    }
+    .navbar .nav-links .sidebar-logo{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .sidebar-logo .logo-name{
+      font-size: 25px;
+      font-weight: 600;
+      color: var(--secondary-color);
+    }
+      .sidebar-logo  i,
+      .navbar .bx-menu{
+        font-size: 25px;
+        color: var(--secondary-color);
+      }
+    nav .navbar .links{
+      display: block;
+      margin-top: 20px;
+    }
+    nav .navbar .links li .arrow{
+      line-height: 40px;
+    }
+  nav .navbar .links li{
+      display: block;
+    }
+  nav .navbar .links li .sub-menu{
+    position: relative;
+    top: 0;
+    box-shadow: none;
+    display: none;
+  }
+  nav .navbar .links li .sub-menu li{
+    border-bottom: none;
+  
+  }
+  
+  nav .navbar .links li .sub-menu li:hover{
+    border-bottom: none;
+  
+  }
+  
+  .navbar .links li .sub-menu .more-sub-menu{
+    display: none;
+    position: relative;
+    left: 0;
+  }
+  .navbar .links li .sub-menu .more-sub-menu li{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .links li:hover .htmlcss-arrow,
+  .links li:hover .js-arrow{
+    transform: rotate(0deg);
+    }
+    .navbar .links li .sub-menu .more-sub-menu{
+      display: none;
+    }
+    .navbar .links li .sub-menu .more span{
+      /* background: red; */
+      display: flex;
+      align-items: center;
+      /* justify-content: space-between; */
+    }
+  
+    .links li .sub-menu .more:hover .more-sub-menu{
+      display: none;
+    }
+    nav .navbar .links li:hover .htmlCss-sub-menu,
+    nav .navbar .links li:hover .js-sub-menu{
+      display: none;
+    }
+  .navbar .nav-links.show1 .links .htmlCss-sub-menu,
+    .navbar .nav-links.show3 .links .js-sub-menu,
+    .navbar .nav-links.show2 .links .more .more-sub-menu{
+        display: block;
+      }
+      .navbar .nav-links.show1 .links .htmlcss-arrow,
+      .navbar .nav-links.show3 .links .js-arrow{
+          transform: rotate(180deg);
+  }
+      .navbar .nav-links.show2 .links .more-arrow{
+        transform: rotate(90deg);
+      }
+  }
+  @media (max-width:370px){
+    nav .navbar .nav-links{
+    max-width: 100%;
+  } 
+  }
+  
+/* Container for the title and content */
+.ga .title {
+    width: 100%; /* Adjust width for better responsiveness */
+    margin-left: 0; /* Reset left margin for smaller screens */
+    margin-top: 20px; /* Add top margin */
+}
+
+/* Style for the main title paragraph */
+.ga .title p {
+    font-family: IBM Plex Mono, monospace; /* Monospace font for the text */
+    font-size: 2.5rem; /* Adjust font size for smaller screens */
+    line-height: 1.4; /* Adjust line spacing for readability */
+    color: var(--secondary-color); /* Primary text color from root variables */
+    text-align: left; /* Keep left-aligned */
+    margin-bottom: 1rem; /* Add more spacing below the paragraph */
+}
+
+/* Style for the "for foodies" part */
+.ga .title p span {
+    display: block; /* Places "for foodies" on a new line */
+    font-family: IBM Plex Mono, monospace; /* Accent font */
+    color: var(--secondary-color); /* Accent color */
+    font-weight: bold; /* Makes the text bold */
+    font-size: 4rem; /* Adjust font size for smaller screens */
+    margin-top: -0.5rem; /* Adjust spacing above "for foodies" */
+    text-align: left; /* Ensure it is also centered */
+}
+
+/* Scope styling for the Full-Time Role box */
+.ga .scope {
+    display: flex; /* Aligns items in a row */
+    align-items: left; /* Vertically aligns items */
+    justify-content: flex-start; /* Centers content horizontally */
+    padding: 1rem; /* Adds spacing inside the box */
+    background-color: var(--white); /* Background color */
+    box-shadow: 6px 6px 0px var(--black); /* Subtle shadow for depth */
+    width: fit-content; /* Adjusts size to content */
+    margin: 0; /* Centers box horizontally */
+    border: 0.1rem solid var(--black);
+    gap: 1rem; /* Adds gap between logo and text */
+}
+
+/* Styling for the logo */
+.ga .scope .logo {
+    width: 64px; /* Fixed width */
+    height: 64px; /* Fixed height */
+}
+
+/* Style for the text inside the scope */
+.ga .scope p {
+    font-weight: 500;
+    font-size: var(--font-size); /* Adjust text size */
+    color: var(--secondary-color); /* Text color */
+    margin: 0; /* Removes default paragraph margin */
+    display: flex; /* To align the text with the dot */
+    align-items: center; /* Centers text and dot vertically */
+    text-align: left;
+    gap: 1rem;
+}
+
+/* Styling for the dot between "Full-Time Role" and "FY 2024-25" */
+.ga .scope .dot {
+    display: inline-block; /* Ensures it's treated like a character */
+    width: 0.5rem; /* Dot diameter */
+    height: 0.5rem; /* Dot diameter */
+    background-color: var(--secondary-color); /* Matches the text color */
+    border-radius: 50%; /* Makes the dot circular */
+    margin: 0 0.5rem; /* Adds spacing around the dot */
+}
+
+/* Responsive Styling */
+@media screen and (max-width: 768px) {
+    .ga {
+        padding: 0 6%; /* Add padding for responsiveness */
+    }
+
+    .ga .title p {
+        font-size: 2rem; /* Reduce font size for medium screens */
+    }
+
+    .ga .title p span {
+        font-size: 3rem; /* Adjust font size for smaller screens */
+    }
+
+    .ga .scope {
+        width: 100%; /* Full width on smaller screens */
+        justify-content: center; /* Center the content */
+        gap: 0.8rem; /* Reduced gap between logo and text */
+        padding: 0.8rem; /* Slightly reduced padding */
+    }
+
+    .ga .scope p {
+        font-size: calc(var(--font-size) * 0.9); /* Reduce font size for medium screens */
+    }
+
+    .ga .scope .logo {
+        width: 48px; /* Smaller logo size */
+        height: 48px; /* Smaller logo size */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .ga .title p {
+        font-size: 1.8rem; /* Further reduce font size */
+    }
+
+    .ga .title p span {
+        font-size: 2.5rem; /* Smaller font for span */
+    }
+
+    .ga .scope {
+        padding: 0.5rem; /* Reduce padding inside the box */
+    }
+
+    .ga .scope p {
+        font-size: 1.2rem; /* Smaller font size */
+    }
+
+    .ga .scope .logo {
+        width: 40px; /* Compact logo size */
+        height: 40px; /* Compact logo size */
+    }
+}
+
+.ga .des p {
+    font-family: Instrument Sans;
+    padding-top: 2rem;
+    font-size: var(--font-size); /* Adjust font size */
+    color: var(--secondary-color); /* Use secondary color */
+    line-height: 1.4; /* Increase line spacing for readability */
+    max-width: 800px; /* Limits the paragraph width */
+    margin: 0; /* Centers the paragraph */
+    text-align: left; /* Ensures the text remains left-aligned */
+}
+.ga .des b {
+    font-size: var(--font-size); /* Increases font size */
+    color: var(--secondary-color); /* Optional: Apply a specific color */
+}
+.foodicons{
+    display: flex;
+    margin-top: 2rem;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.foodicons img{
+    width: 242px;
+    height: 242px;
+}
+
+.dotted-line {
+    height: 2px; /* Height of the line */
+    background: repeating-linear-gradient(
+        to right,
+        var(--secondary-color) 0,
+        var(--secondary-color) 2px,
+        transparent 2px,
+        transparent 10px
+    );
+    margin: 3rem 0 0 0; /* Adds top margin only */
+}
+.intro {
+    width: 80%; /* Adjust width as needed */
+    font-family: var(--primary-font); /* Replace with your font */
+    font-size: var(--font-size); /* Base font size */
+    line-height: 1.4; /* Improves readability */
+    color: var(--secondary-color); /* Base text color */
+    margin: 0 auto; /* Center align the intro section */
+}
+
+.intro ul {
+    list-style-type: disc; /* Adds bullet points */
+    padding-left: 2rem; /* Indents the list */
+}
+
+.intro ul li {
+    margin-bottom: 1rem; /* Adds spacing between list items */
+}
+
+.intro ul li span {
+    font-weight: bold; /* Makes "For the home cooks" and "For food lovers" bold */
+    font-size: var(--font-size);
+    color: var(--c1); /* Applies the --c1 color */
+}
+
+/* Responsive Styling */
+@media screen and (max-width: 768px) {
+    .intro {
+        width: 90%; /* Increase width to fill more screen space */
+        font-size: 1.8rem; /* Adjust font size for readability on medium screens */
+    }
+
+    .intro ul {
+        padding-left: 1.5rem; /* Reduce list padding for smaller screens */
+    }
+
+    .intro ul li span {
+        font-size: 1.6rem; /* Adjust font size for spans */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .intro {
+        width: 100%; /* Full width for smaller screens */
+        font-size: 1.6rem; /* Smaller font size for compact devices */
+    }
+
+    .intro ul {
+        padding-left: 1rem; /* Reduce padding even more for very small screens */
+    }
+
+    .intro ul li {
+        margin-bottom: 0.8rem; /* Decrease spacing between items */
+    }
+
+    .intro ul li span {
+        font-size: 1.4rem; /* Compact font size for spans */
+    }
+}
+
+.highlights {
+    width: 80%; /* Adjusts the container width */
+    font-family: var(--primary-font); /* Replace with your desired font */
+    font-size: var(--font-size); /* Adjust text size */
+    line-height: 1.4; /* Improves spacing between lines */
+    color: var(--secondary-color); /* Base text color */
+    margin: 0 auto; /* Centers the highlights container */
+}
+
+.highlights ul {
+    list-style-type: disc; /* Adds bullet points */
+    padding-left: 2rem; /* Indents the list */
+}
+
+.highlights ul li {
+    margin-bottom: 1rem; /* Adds spacing between list items */
+}
+
+.highlights ul li b {
+    font-weight: bold; /* Makes bold text stand out */
+    color: var(--primary-color); /* Optional: Use primary color for bold text */
+}
+
+/* Responsive Styling */
+@media screen and (max-width: 768px) {
+    .highlights {
+        width: 90%; /* Increase width to fill more screen space */
+        font-size: 1.8rem; /* Adjust font size for readability on medium screens */
+    }
+
+    .highlights ul {
+        padding-left: 1.5rem; /* Reduce padding for smaller screens */
+    }
+
+    .highlights ul li {
+        margin-bottom: 0.9rem; /* Adjust spacing for medium screens */
+    }
+
+    .highlights ul li b {
+        font-size: 1.8rem; /* Adjust font size for bold text */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .highlights {
+        width: 100%; /* Full width for compact screens */
+        font-size: 1.6rem; /* Adjust font size for smaller screens */
+    }
+
+    .highlights ul {
+        padding-left: 1rem; /* Reduce padding further for very small screens */
+    }
+
+    .highlights ul li {
+        margin-bottom: 0.8rem; /* Compact spacing for list items */
+    }
+
+    .highlights ul li b {
+        font-size: 1.4rem; /* Compact size for bold text */
+    }
+}
+
+.ga .ui-des{
+    width: 100%; /* Full width for responsiveness */
+    max-width: 800px; /* Optional max-width for larger screens */
+    margin-top: 0;
+    padding: 0;
+}
+
+.ga .ui-des p{
+    padding: 0;
+    margin-top: 0;
+    font-size: var(--font-size);
+    color: var(--secondary-color);
+}
+.ga .descp{
+    width: 100%; /* Full width for responsiveness */
+    max-width: 800px; /* Optional max-width for larger screens */
+    margin-top: 1rem;
+    padding: 0;
+}
+.ga .descp b{
+    font-size: 2.4rem;
+    color: var(--c1);
+}
+.ga .descp p{
+    padding-top: 1rem;
+    margin-top: 0;
+    font-size: var(--font-size);
+}
+.descp img {
+    display: inline-block;
+    justify-self: start;
+    align-items: flex-start;
+    margin-top: 1rem;
+    width: 100%; /* Full width by default for responsiveness */
+    max-width: 800px; /* Restrict maximum width */
+    height: auto; /* Maintain aspect ratio */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effects */
+}
+
+/* Media Queries for Responsiveness */
+
+/* Medium screens (up to 768px) */
+@media screen and (max-width: 768px) {
+    .descp img {
+        max-width: 90%; /* Reduce width for medium screens */
+        margin-top: 0.8rem; /* Adjust margin */
+    }
+}
+
+/* Small screens (up to 480px) */
+@media screen and (max-width: 480px) {
+    .descp img {
+        max-width: 100%; /* Full width for smaller screens */
+        margin-top: 0.5rem; /* Adjust margin further */
+    }
+}
+
+.ga .descp .imgheader b{
+    font-size: var(--font-size);
+    color: var(--secondary-color);
+}
+.descp .mainscreenimg p{
+    font-size: 1.0rem;
+    font-style: italic;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+.descp .lr b {
+    display: flex;
+    font-size: var(--font-size);
+    color: var(--secondary-color);
+    margin-bottom: 1rem;
+}
+.descp .lr ul li{
+    font-size: var(--font-size);
+    color: var(--secondary-color);
+    margin-bottom: 1rem;
+    margin-left: 1.5rem;
+    max-width: 800px;
+}
+.descp .ei p{
+    padding-top: 2rem;
+    font-size: 1.6rem;
+    font-style: italic;
+    font-weight: 500;
+}
+
+.descp .ei b{
+    font-size: 2.4rem;
+    color: var(--secondary-color);
+}
+
+.ga .challenges {
+    display: inline-block;
+    align-items: flex-start;
+    justify-content: flex-start;
+    width: 100%; /* Full width for responsiveness */
+    max-width: 800px; /* Limit the maximum width */
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+    background-color: var(--white);
+    box-shadow: 0px 0px 0 var(--black);
+    border: 0.1rem solid var(--c1);
+    padding: 2rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effects */
+}
+
+.ga .challenges:hover {
+    box-shadow: 6px 6px 0 var(--c1);
+}
+
+.ga .challenges b {
+    margin-bottom: 1rem;
+    font-size: 2.4rem; /* Default font size */
+    color: var(--c1);
+    background-color: var(--white);
+}
+
+.ga .challenges ul {
+    display: grid;
+    justify-content: flex-start;
+    align-items: flex-start;
+    font-size: var(--font-size);
+    font-weight: 400;
+    margin-top: 1rem;
+    list-style-type: disc; /* Adds bullet points */
+    padding-left: 2rem; /* Indents the list */
+}
+
+.ga .challenges li {
+    font-weight: 400;
+    text-align: left;
+    font-size: 1.6rem; /* Default font size */
+    margin-bottom: 1rem;
+    color: var(--secondary-color);
+}
+
+/* Media Queries for Responsiveness */
+
+/* Medium screens (up to 768px) */
+@media screen and (max-width: 768px) {
+    .ga .challenges {
+        padding: 1.5rem; /* Reduce padding for medium screens */
+        max-width: 90%; /* Shrink max width for better fit */
+    }
+
+    .ga .challenges b {
+        font-size: 2rem; /* Adjust font size for medium screens */
+    }
+
+    .ga .challenges ul {
+        font-size: 1.4rem; /* Adjust font size for medium screens */
+        padding-left: 1.5rem; /* Reduce padding for better alignment */
+    }
+
+    .ga .challenges li {
+        font-size: 1.4rem; /* Smaller text size */
+    }
+}
+
+/* Small screens (up to 480px) */
+@media screen and (max-width: 480px) {
+    .ga .challenges {
+        padding: 1rem; /* Compact padding */
+        max-width: 100%; /* Full width for small screens */
+    }
+
+    .ga .challenges b {
+        font-size: 1.8rem; /* Further adjust font size */
+    }
+
+    .ga .challenges ul {
+        font-size: 1.2rem; /* Smaller font size for better readability */
+        padding-left: 1rem; /* Reduce padding further */
+    }
+
+    .ga .challenges li {
+        font-size: 1.2rem; /* Adjust font size for small screens */
+    }
+}
+
+.ga .takeaways {
+    display: inline-block;
+    align-items: flex-start;
+    justify-content: flex-start;
+    width: 100%; /* Full width for responsiveness */
+    max-width: 800px; /* Limit maximum width */
+    margin-top: 0.01rem;
+    margin-bottom: 2rem;
+    background-color: var(--white);
+    box-shadow: 0px 0px 0 var(--c2);
+    border: 0.1rem solid var(--c2);
+    padding: 2rem; /* Default padding */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effects */
+}
+
+.ga .takeaways:hover {
+    box-shadow: 6px 6px 0 var(--c2);
+}
+
+.ga .takeaways b {
+    margin-bottom: 1rem;
+    font-size: 2.4rem; /* Default font size */
+    color: var(--secondary-color);
+    background-color: var(--white);
+}
+
+.ga .takeaways ul {
+    display: grid;
+    justify-content: flex-start;
+    align-items: flex-start;
+    font-size: var(--font-size);
+    font-weight: 400;
+    margin-top: 1rem;
+    list-style-type: disc; /* Adds bullet points */
+    padding-left: 2rem; /* Indents the list */
+}
+
+.ga .takeaways li {
+    font-weight: 400;
+    text-align: left;
+    margin-bottom: 1rem;
+    font-size: var(--font-size);
+    color: var(--secondary-color);
+}
+
+/* Media Queries for Responsiveness */
+
+/* Medium screens (up to 768px) */
+@media screen and (max-width: 768px) {
+    .ga .takeaways {
+        padding: 1.5rem; /* Reduce padding for medium screens */
+        max-width: 90%; /* Shrink max width */
+    }
+
+    .ga .takeaways b {
+        font-size: 2rem; /* Adjust font size for medium screens */
+    }
+
+    .ga .takeaways ul {
+        font-size: 1.4rem; /* Adjust font size for medium screens */
+        padding-left: 1.5rem; /* Reduce padding */
+    }
+
+    .ga .takeaways li {
+        font-size: 1.4rem; /* Adjust font size */
+    }
+}
+
+/* Small screens (up to 480px) */
+@media screen and (max-width: 480px) {
+    .ga .takeaways {
+        padding: 1rem; /* Compact padding */
+        max-width: 100%; /* Full width for small screens */
+    }
+
+    .ga .takeaways b {
+        font-size: 1.8rem; /* Further adjust font size */
+    }
+
+    .ga .takeaways ul {
+        font-size: 1.2rem; /* Smaller font size */
+        padding-left: 1rem; /* Reduce padding further */
+    }
+
+    .ga .takeaways li {
+        font-size: 1.2rem; /* Adjust font size for small screens */
+    }
+}

@@ -1,0 +1,931 @@
+    * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Instrument Sans;
+    /* background-color: var(--primary-1); */
+}
+
+/* Root Variables */
+:root {
+    --primary-1: #FFFCF4;
+    --primary-2: #FFFAED;
+    --secondary-color: #10375C;
+    --c1: #EB8317;
+    --c2: #F3C623;
+    --white: #FFFFFF;
+    --black: #0E0E0E;
+    --primary-font: Instrument Sans;
+    --font-size: 1.5rem;
+}
+.coucou {
+    position: absolute; /* Use absolute positioning */
+    top: 5%; /* Adds top margin */
+    left: 50%; /* Centers horizontally */
+    transform: translateX(-50%); /* Centers by shifting left by 50% of its width */
+    width: 100%; /* Adjust width for smaller screens */
+    max-width: 800px; /* Optional max-width for larger screens */
+    height: auto; /* Adjust height based on content */
+    min-height: 80vh; /* Ensures a minimum height for balance */
+    text-align: left; /* Keeps content left-aligned */
+    margin: 0 auto; /* Adds horizontal centering and vertical spacing */
+    margin-top: 6rem;
+}
+
+/* Container for the title and content */
+.coucou .title {
+    width: 100%; /* Adjust width for better responsiveness */
+    margin-left: 0; /* Reset left margin for smaller screens */
+    margin-top: 20px; /* Add top margin */
+}
+
+/* Style for the main title paragraph */
+.coucou .title p {
+    font-family: IBM Plex Mono, monospace; /* Monospace font for the text */
+    font-size: 2.5rem; /* Adjust font size for smaller screens */
+    line-height: 1.4; /* Adjust line spacing for readability */
+    color: var(--secondary-color); /* Primary text color from root variables */
+    text-align: left; /* Keep left-aligned */
+    margin-bottom: 1rem; /* Add more spacing below the paragraph */
+}
+
+/* Style for the "for foodies" part */
+.coucou .title p span {
+    display: block; /* Places "for foodies" on a new line */
+    font-family: IBM Plex Mono, monospace; /* Accent font */
+    color: var(--secondary-color); /* Accent color */
+    font-weight: bold; /* Makes the text bold */
+    font-size: 4rem; /* Adjust font size for smaller screens */
+    margin-top: -0.5rem; /* Adjust spacing above "for foodies" */
+    text-align: left; /* Ensure it is also centered */
+}
+
+/* Media queries for responsiveness */
+
+/* Small screens (up to 768px) */
+@media screen and (max-width: 768px) {
+    .coucou {
+        top: 10%; /* Adjust top margin */
+        margin: 20px auto; /* Add vertical and horizontal margin */
+    }
+
+    .coucou .title {
+        margin-top: 30px; /* Increase top margin */
+        padding: 0 6%; /* Increase side padding */
+    }
+
+    .coucou .title p {
+        font-size: 2rem; /* Reduce font size for smaller screens */
+        margin-bottom: 1.5rem; /* Add more bottom margin */
+    }
+
+    .coucou .title p span {
+        font-size: 3.5rem; /* Reduce size for "for foodies" */
+        margin-top: 0; /* Adjust spacing above */
+    }
+}
+
+/* Very small screens (up to 480px) */
+@media screen and (max-width: 480px) {
+    .coucou {
+        top: 15%; /* Adjust top margin */
+        margin: 30px auto; /* Add more vertical margin */
+    }
+
+    .coucou .title {
+        margin-top: 12px; /* Increase top margin */
+    }
+
+    .coucou .title p {
+        font-size: 1.8rem; /* Further reduce font size */
+        margin-bottom: 2rem; /* Add more spacing below */
+    }
+
+    .coucou .title p span {
+        font-size: 3rem; /* Further reduce size for "for foodies" */
+        margin-top: 0.5rem; /* Adjust spacing above */
+    }
+}
+
+
+
+/* Scope styling for the Full-Time Role box */
+.coucou .scope {
+    display: flex; /* Aligns items in a row */
+    align-items: center; /* Vertically aligns items */
+    justify-content: flex-start; /* Centers content horizontally */
+    padding: 1rem; /* Adds spacing inside the box */
+    background-color: var(--white); /* Background color */
+    box-shadow: 6px 6px 0px var(--black); /* Subtle shadow for depth */
+    width: fit-content; /* Adjusts size to content */
+    border: 0.1rem solid var(--black);
+    gap: 1rem; /* Adds gap between logo and text */
+}
+
+/* Styling for the logo */
+.coucou .scope .logo {
+    width: 64px; /* Fixed width */
+    height: 64px; /* Fixed height */
+}
+
+/* Style for the text inside the scope */
+.coucou .scope p {
+    font-weight: 500;
+    font-size: var(--font-size); /* Adjust text size */
+    color: var(--secondary-color); /* Text color */
+    margin: 0; /* Removes default paragraph margin */
+    display: flex; /* To align the text with the dot */
+    align-items: center; /* Centers text and dot vertically */
+    text-align: left;
+    gap: 1rem;
+}
+
+/* Styling for the dot between "Full-Time Role" and "FY 2024-25" */
+.coucou .scope .dot {
+    display: inline-block; /* Ensures it's treated like a character */
+    width: 0.5rem; /* Dot diameter */
+    height: 0.5rem; /* Dot diameter */
+    background-color: var(--secondary-color); /* Matches the text color */
+    border-radius: 50%; /* Makes the dot circular */
+    margin: 0 0.5rem; /* Adds spacing around the dot */
+}
+
+/* Media Queries for Responsiveness */
+
+/* Medium screens (up to 768px) */
+@media screen and (max-width: 768px) {
+    .coucou .scope {
+        width: 100%; /* Full width on smaller screens */
+        justify-content: center; /* Center the content */
+        gap: 0.8rem; /* Reduced gap between logo and text */
+        padding: 0.8rem; /* Slightly reduced padding */
+    }
+
+    .coucou .scope .logo {
+        width: 50px; /* Reduce logo size */
+        height: 50px; /* Reduce logo size */
+    }
+
+    .coucou .scope p {
+        font-size: calc(var(--font-size) * 0.9); /* Reduce font size for medium screens */
+    }
+}
+
+/* Small screens (up to 480px) */
+@media screen and (max-width: 480px) {
+    .coucou .scope {
+        width: 100%; /* Full width on small screens */
+        justify-content: center; /* Center content */
+        padding: 0.5rem; /* Reduced padding */
+        gap: 0.5rem; /* Further reduce gap */
+    }
+
+    .coucou .scope .logo {
+        width: 40px; /* Smaller logo */
+        height: 40px; /* Smaller logo */
+    }
+
+    .coucou .scope p {
+        font-size: calc(var(--font-size) * 0.8); /* Further reduce font size */
+    }
+
+    .coucou .scope .dot {
+        width: 0.4rem; /* Smaller dot */
+        height: 0.4rem; /* Smaller dot */
+    }
+}
+
+.coucou .des p {
+    font-family: Instrument Sans;
+    padding-top: 2rem;
+    font-size: var(--font-size); /* Base font size from variables */
+    color: var(--secondary-color); /* Use secondary color */
+    line-height: 1.6; /* Increase line spacing for better readability */
+    max-width: 800px; /* Limit paragraph width for readability */
+    margin: 0 auto; /* Center-align the paragraph container */
+    text-align: left; /* Keep the text left-aligned */
+}
+
+.coucou .des b {
+    font-size: calc(var(--font-size) * 1.1); /* Slightly larger font size for emphasis */
+    color: var(--secondary-color); /* Optional: Apply a specific color */
+}
+
+/* Media queries for responsiveness */
+
+/* Medium screens (up to 768px) */
+@media screen and (max-width: 768px) {
+    .coucou .des p {
+        font-size: calc(var(--font-size) * 0.9); /* Reduce font size for medium screens */
+        padding-top: 1.5rem; /* Adjust padding */
+        max-width: 90%; /* Adjust width for smaller screens */
+    }
+
+    .coucou .des b {
+        font-size: calc(var(--font-size) * 1); /* Adjust bold text size */
+    }
+}
+
+/* Small screens (up to 480px) */
+@media screen and (max-width: 480px) {
+    .coucou .des p {
+        font-size: calc(var(--font-size) * 0.8); /* Further reduce font size */
+        padding-top: 1rem; /* Reduce top padding */
+        max-width: 100%; /* Remove width limitation for very small screens */
+    }
+
+    .coucou .des b {
+        font-size: calc(var(--font-size) * 0.9); /* Scale bold text for small screens */
+    }
+}
+
+.foodicons {
+    display: flex;
+    flex-wrap: wrap; /* Allows items to wrap onto the next line */
+    margin-top: 2rem;
+    align-items: flex-start;
+    justify-content: flex-start; /* Adjust alignment for responsiveness */
+    gap: 1rem; /* Adds spacing between icons */
+}
+
+.foodicons img {
+    width: 242px;
+    height: 242px;
+    object-fit: cover; /* Ensures proper scaling without distortion */
+    border-radius: 8px; /* Optional: Adds rounded corners for a modern look */
+}
+
+/* Media queries for responsiveness */
+
+/* Medium screens (up to 768px) */
+@media screen and (max-width: 768px) {
+    .foodicons {
+        justify-content: center; /* Center icons on medium screens */
+        gap: 1.5rem; /* Increase spacing between items */
+    }
+
+    .foodicons img {
+        width: 180px; /* Reduce icon size */
+        height: 180px;
+    }
+}
+
+/* Small screens (up to 480px) */
+@media screen and (max-width: 480px) {
+    .foodicons {
+        justify-content: center; /* Center align for smaller screens */
+        gap: 1rem; /* Reduce spacing slightly for smaller screens */
+    }
+
+    .foodicons img {
+        width: 120px; /* Further reduce icon size for small screens */
+        height: 120px;
+    }
+}
+
+.dotted-line {
+    height: 2px; /* Height of the line */
+    background: repeating-linear-gradient(
+        to right,
+        var(--secondary-color) 0,
+        var(--secondary-color) 2px,
+        transparent 2px,
+        transparent 10px
+    );
+    margin: 3rem 0 0 0; /* Adds top margin only */
+}
+.intro {
+    width: 80%; /* Adjust width as needed */
+    font-family: var(--primary-font); /* Replace with your font */
+    font-size: var(--font-size); /* Base font size */
+    line-height: 1.4; /* Improves readability */
+    color: var(--secondary-color); /* Base text color */
+    margin: 0 auto; /* Center align the intro section */
+}
+
+.intro ul {
+    list-style-type: disc; /* Adds bullet points */
+    padding-left: 2rem; /* Indents the list */
+}
+
+.intro ul li {
+    margin-bottom: 1rem; /* Adds spacing between list items */
+}
+
+.intro ul li span {
+    font-weight: bold; /* Makes "For the home cooks" and "For food lovers" bold */
+    font-size: var(--font-size);
+    color: var(--c1); /* Applies the --c1 color */
+}
+
+/* Responsive Styling */
+@media screen and (max-width: 768px) {
+    .intro {
+        width: 90%; /* Increase width to fill more screen space */
+        font-size: 1.8rem; /* Adjust font size for readability on medium screens */
+    }
+
+    .intro ul {
+        padding-left: 1.5rem; /* Reduce list padding for smaller screens */
+    }
+
+    .intro ul li span {
+        font-size: 1.6rem; /* Adjust font size for spans */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .intro {
+        width: 100%; /* Full width for smaller screens */
+        font-size: 1.6rem; /* Smaller font size for compact devices */
+    }
+
+    .intro ul {
+        padding-left: 1rem; /* Reduce padding even more for very small screens */
+    }
+
+    .intro ul li {
+        margin-bottom: 0.8rem; /* Decrease spacing between items */
+    }
+
+    .intro ul li span {
+        font-size: 1.4rem; /* Compact font size for spans */
+    }
+}
+
+.highlights {
+    width: 80%; /* Adjusts the container width */
+    font-family: var(--primary-font); /* Replace with your desired font */
+    font-size: var(--font-size); /* Adjust text size */
+    line-height: 1.4; /* Improves spacing between lines */
+    color: var(--secondary-color); /* Base text color */
+    margin: 0 auto; /* Centers the highlights container */
+}
+
+.highlights ul {
+    list-style-type: disc; /* Adds bullet points */
+    padding-left: 2rem; /* Indents the list */
+}
+
+.highlights ul li {
+    margin-bottom: 1rem; /* Adds spacing between list items */
+}
+
+.highlights ul li b {
+    font-weight: bold; /* Makes bold text stand out */
+    color: var(--primary-color); /* Optional: Use primary color for bold text */
+}
+
+/* Responsive Styling */
+@media screen and (max-width: 768px) {
+    .highlights {
+        width: 90%; /* Increase width to fill more screen space */
+        font-size: 1.8rem; /* Adjust font size for readability on medium screens */
+    }
+
+    .highlights ul {
+        padding-left: 1.5rem; /* Reduce padding for smaller screens */
+    }
+
+    .highlights ul li {
+        margin-bottom: 0.9rem; /* Adjust spacing for medium screens */
+    }
+
+    .highlights ul li b {
+        font-size: 1.8rem; /* Adjust font size for bold text */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .highlights {
+        width: 100%; /* Full width for compact screens */
+        font-size: 1.6rem; /* Adjust font size for smaller screens */
+    }
+
+    .highlights ul {
+        padding-left: 1rem; /* Reduce padding further for very small screens */
+    }
+
+    .highlights ul li {
+        margin-bottom: 0.8rem; /* Compact spacing for list items */
+    }
+
+    .highlights ul li b {
+        font-size: 1.4rem; /* Compact size for bold text */
+    }
+}
+
+.coucou .ui-des{
+    width: 100%; /* Full width for responsiveness */
+    max-width: 800px; /* Optional max-width for larger screens */
+    margin-top: 0;
+    padding: 0;
+}
+
+.coucou .ui-des p{
+    padding: 0;
+    margin-top: 0;
+    font-size: var(--font-size);
+    color: var(--secondary-color);
+}
+.coucou .onb{
+    width: 100%; /* Full width for responsiveness */
+    max-width: 800px; /* Optional max-width for larger screens */
+    margin-top: 1rem;
+    padding: 0;
+}
+.coucou .onb b{
+    font-size: 2.4rem;
+    color: var(--c1);
+}
+.coucou .onb p{
+    padding-top: 1rem;
+    margin-top: 0;
+    font-size: var(--font-size);
+}
+.onb img {
+    display: inline-block;
+    justify-self: start;
+    align-items: flex-start;
+    margin-top: 2rem;
+    width: 260px;
+    height: auto;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effects */
+}
+.coucou .homefeed {
+    width: 100%; /* Full width for responsiveness */
+    max-width: 800px; /* Optional max-width for larger screens */
+    margin-top: 1rem;
+    padding: 0;
+}
+
+.coucou .homefeed b {
+    font-size: 2.4rem; /* Base font size */
+    color: var(--c1);
+}
+
+/* Paragraph Styling */
+.coucou .homefeed p {
+    padding-top: 1rem;
+    margin-top: 0;
+    font-size: var(--font-size); /* Base font size */
+    line-height: 1.6; /* Improves readability */
+}
+
+/* Unordered List Styling */
+.coucou .homefeed ul {
+    display: flex;
+    flex-wrap: wrap; /* Allows list items to wrap onto new lines */
+    justify-content: flex-start;
+    align-items: flex-start;
+    font-weight: 500;
+    margin-top: 0.5rem;
+    list-style-type: disc; /* Adds bullet points */
+    padding-left: 2rem; /* Indents the list */
+    gap: 1rem; /* Adds spacing between items */
+}
+
+.coucou .homefeed li {
+    padding-right: 2rem;
+    text-align: left;
+    font-size: var(--font-size); /* Base font size */
+    color: var(--secondary-color);
+}
+
+/* Media Queries for Responsiveness */
+
+/* Medium screens (up to 768px) */
+@media screen and (max-width: 768px) {
+    .coucou .homefeed b {
+        font-size: 2rem; /* Reduce bold font size */
+    }
+
+    .coucou .homefeed p {
+        font-size: calc(var(--font-size) * 0.9); /* Scale font size */
+    }
+
+    .coucou .homefeed ul {
+        padding-left: 1.5rem; /* Reduce left padding */
+        gap: 0.8rem; /* Adjust gap for medium screens */
+    }
+
+    .coucou .homefeed li {
+        font-size: calc(var(--font-size) * 0.9); /* Scale font size */
+        padding-right: 1.5rem; /* Reduce spacing between list items */
+    }
+}
+
+/* Small screens (up to 480px) */
+@media screen and (max-width: 480px) {
+    .coucou .homefeed {
+        max-width: 100%; /* Remove width constraints for smaller screens */
+    }
+
+    .coucou .homefeed b {
+        font-size: 1.8rem; /* Further reduce bold font size */
+    }
+
+    .coucou .homefeed p {
+        font-size: calc(var(--font-size) * 0.8); /* Scale font size down */
+    }
+
+    .coucou .homefeed ul {
+        padding-left: 1rem; /* Further reduce left padding */
+        gap: 0.5rem; /* Compact gap for smaller screens */
+    }
+
+    .coucou .homefeed li {
+        font-size: calc(var(--font-size) * 0.8); /* Scale font size down */
+        padding-right: 1rem; /* Compact spacing between list items */
+    }
+}
+
+.homefeed img {
+    display: inline-block;
+    justify-self: start;
+    align-items: flex-start;
+    margin-top: 2rem;
+    width: 260px;
+    height: auto;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effects */
+}
+.coucou .recipe{
+    width: 100%; /* Full width for responsiveness */
+    max-width: 800px; /* Optional max-width for larger screens */
+    margin-top: 1rem;
+    display: inline-block;
+    align-items: start;
+    padding: 0;
+}
+.coucou .recipe b{
+    font-size: 2.4rem;
+    color: var(--c1);
+}
+.coucou .recipe p{
+    padding-top: 1rem;
+    margin-top: 0;
+    font-size: var(--font-size);
+}
+.recipe .recipeimg {
+    display: flex;
+    flex-direction: row; /* Default direction is row */
+    justify-self: auto;
+    align-items: flex-start;
+    width: 260px;
+    height: auto;
+    gap: 0.2rem; /* Add spacing between flex items */
+}
+
+.recipeimg img {
+    margin-top: 2rem;
+    width: 260px;
+    height: auto;
+    object-fit: cover; /* Ensure proper scaling without distortion */
+}
+
+/* Media queries for responsiveness */
+
+/* Medium screens (up to 768px) */
+@media screen and (max-width: 768px) {
+    .recipe .recipeimg {
+        flex-direction: column; /* Switch to column layout */
+        align-items: flex-start; /* Center items in column layout */
+        width: 100%; /* Use full width */
+        gap: 1.5rem; /* Increase spacing between images */
+    }
+
+    .recipeimg img {
+        margin-top: 1.5rem; /* Adjust top margin */
+    }
+}
+
+/* Small screens (up to 480px) */
+@media screen and (max-width: 480px) {
+    .recipe .recipeimg {
+        flex-direction: column; /* Keep column layout */
+        align-items: flex-start; /* Center align for small screens */
+        width: 100%; /* Full width */
+        gap: 1rem; /* Adjust spacing */
+    }
+
+    .recipeimg img {
+        margin-top: 1rem; /* Adjust top margin */
+    }
+}
+
+.coucou .game{
+    width: 100%; /* Full width for responsiveness */
+    max-width: 800px; /* Optional max-width for larger screens */
+    margin-top: 1rem;
+    display: inline-block;
+    align-items: start;
+    padding: 0;
+}
+.coucou .game b{
+    font-size: 2.4rem;
+    color: var(--c1);
+}
+.coucou .game p{
+    padding-top: 1rem;
+    margin-top: 0;
+    font-size: var(--font-size);
+}
+.game .gameimg {
+    display: flex;
+    flex-direction: row; /* Default direction is row */
+    justify-self: auto;
+    align-items: flex-start;
+    width: 260px;
+    height: auto;
+    gap: 0.2rem; /* Add spacing between flex items */
+}
+
+.gameimg img {
+    margin-top: 2rem;
+    width: 260px;
+    height: auto;
+    object-fit: cover; /* Ensure proper scaling without distortion */
+}
+
+/* Media queries for responsiveness */
+
+/* Medium screens (up to 768px) */
+@media screen and (max-width: 768px) {
+    .game .gameimg {
+        flex-direction: column; /* Switch to column layout */
+        align-items: flex-start; /* Center items in column layout */
+        width: 100%; /* Use full width */
+        gap: 1.5rem; /* Increase spacing between images */
+    }
+
+    .gameimg img {
+        margin-top: 1.5rem; /* Adjust top margin */
+    }
+}
+
+/* Small screens (up to 480px) */
+@media screen and (max-width: 480px) {
+    .game .gameimg {
+        flex-direction: column; /* Keep column layout */
+        align-items: flex-start; /* Center align for small screens */
+        width: 100%; /* Full width */
+        gap: 1rem; /* Adjust spacing */
+    }
+
+    .gameimg img {
+        margin-top: 1rem; /* Adjust top margin */
+    }
+}
+
+.coucou .game .gamedes{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+.coucou .game .gamedes b{
+    font-size: var(--font-size);
+    color: var(--secondary-color);
+    font-weight: 500;
+    padding: 2rem;
+    margin-top: 1rem;
+    text-align: left;
+}
+.coucou .comm{
+    width: 100%; /* Full width for responsiveness */
+    max-width: 800px; /* Optional max-width for larger screens */
+    margin-top: 1rem;
+    display: inline-block;
+    align-items: start;
+    padding: 0;
+}
+.coucou .comm b{
+    font-size: 2.4rem;
+    color: var(--c1);
+}
+.coucou .comm p{
+    padding-top: 1rem;
+    margin-top: 0;
+    font-size: var(--font-size);
+}
+.comm .commimg {
+    display: flex;
+    flex-direction: row; /* Default to row */
+    justify-self: auto;
+    align-items: flex-start;
+    width: 260px;
+    height: auto;
+    gap: 0.2rem; /* Add spacing if there are multiple elements in this flex container */
+}
+
+.commimg img {
+    margin-top: 2rem;
+    width: 260px;
+    height: auto;
+    object-fit: cover; /* Ensures the image maintains aspect ratio without distortion */
+}
+
+/* Media Queries for Responsiveness */
+
+/* Medium screens (up to 768px) */
+@media screen and (max-width: 768px) {
+    .comm .commimg {
+        width: 100%; /* Full width on smaller screens */
+        justify-content: center; /* Center the content */
+        gap: 1rem; /* Adjust spacing between flex items */
+        flex-direction: column; /* Stack images vertically on medium screens */
+    }
+
+    .commimg img {
+        width: 260px; /* Reduce image width for medium screens */
+        margin-top: 1.5rem; /* Adjust top margin */
+    }
+}
+
+/* Small screens (up to 480px) */
+@media screen and (max-width: 480px) {
+    .comm .commimg {
+        width: 100%; /* Full width on small screens */
+        justify-content: center; /* Center content */
+        gap: 1rem; /* Adjust spacing */
+        flex-direction: column; /* Stack images vertically on small screens */
+    }
+
+    .commimg img {
+        margin-top: 1rem; /* Adjust top margin */
+    }
+}
+
+
+.coucou .challenges {
+    display: inline-block;
+    align-items: flex-start;
+    justify-content: flex-start;
+    width: 800px; /* Default width */
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+    background-color: var(--white);
+    box-shadow: 0px 0px 0 var(--black);
+    border: 0.1rem solid var(--c1);
+    padding: 2rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effects */
+}
+
+.coucou .challenges:hover {
+    box-shadow: 6px 6px 0 var(--c1);
+}
+
+.coucou .challenges b {
+    margin-bottom: 1rem;
+    font-size: 2.4rem;
+    color: var(--c1);
+    background-color: var(--white);
+}
+
+.coucou .challenges ul {
+    display: grid;
+    justify-content: flex-start;
+    align-items: flex-start;
+    font-size: var(--font-size);
+    font-weight: 400;
+    margin-top: 1rem;
+    list-style-type: disc; /* Adds bullet points */
+    padding-left: 2rem; /* Indents the list */
+}
+
+.coucou .challenges li {
+    font-weight: 400;
+    text-align: left;
+    font-size: 1.6rem;
+    color: var(--secondary-color);
+}
+
+/* Media Queries for Responsiveness */
+
+/* Medium screens (up to 768px) */
+@media screen and (max-width: 768px) {
+    .coucou .challenges {
+        width: 100%; /* Full width on smaller screens */
+        padding: 1.5rem; /* Adjust padding */
+        box-shadow: 0px 0px 0 var(--black); /* Remove box shadow for cleaner look */
+        border-width: 0.1rem; /* Keep border thin */
+    }
+
+    .coucou .challenges b {
+        font-size: 2rem; /* Reduce font size for the heading */
+    }
+
+    .coucou .challenges ul {
+        font-size: 1.4rem; /* Smaller font size for list items */
+    }
+
+    .coucou .challenges li {
+        font-size: 1.4rem; /* Reduce font size for list items */
+    }
+}
+
+/* Small screens (up to 480px) */
+@media screen and (max-width: 480px) {
+    .coucou .challenges {
+        width: 100%; /* Full width on very small screens */
+        padding: 1rem; /* Further reduce padding */
+    }
+
+    .coucou .challenges b {
+        font-size: 1.8rem; /* Further reduce font size for the heading */
+    }
+
+    .coucou .challenges ul {
+        font-size: 1.2rem; /* Smaller font size for list items */
+    }
+
+    .coucou .challenges li {
+        font-size: 1.2rem; /* Further reduce font size for list items */
+    }
+}
+
+.coucou .takeaways {
+    display: inline-block;
+    align-items: flex-start;
+    justify-content: flex-start;
+    width: 800px; /* Default width */
+    margin-top: 0.01rem;
+    margin-bottom: 2rem;
+    background-color: var(--white);
+    box-shadow: 0px 0px 0 var(--c2);
+    border: 0.1rem solid var(--c2);
+    padding: 2rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effects */
+}
+
+.coucou .takeaways:hover {
+    box-shadow: 6px 6px 0 var(--c2);
+}
+
+.coucou .takeaways b {
+    margin-bottom: 1rem;
+    font-size: 2.4rem;
+    color: var(--secondary-color);
+    background-color: var(--white);
+}
+
+.coucou .takeaways ul {
+    display: grid;
+    justify-content: flex-start;
+    align-items: flex-start;
+    font-size: var(--font-size);
+    font-weight: 400;
+    margin-top: 1rem;
+    list-style-type: disc; /* Adds bullet points */
+    padding-left: 2rem; /* Indents the list */
+}
+
+.coucou .takeaways li {
+    font-weight: 400;
+    text-align: left;
+    font-size: var(--font-size);
+    color: var(--secondary-color);
+}
+
+/* Media Queries for Responsiveness */
+
+/* Medium screens (up to 768px) */
+@media screen and (max-width: 768px) {
+    .coucou .takeaways {
+        width: 100%; /* Full width on smaller screens */
+        padding: 1.5rem; /* Adjust padding */
+        box-shadow: 0px 0px 0 var(--c2); /* Remove box shadow for cleaner look */
+        border-width: 0.1rem; /* Keep border thin */
+    }
+
+    .coucou .takeaways b {
+        font-size: 2rem; /* Reduce font size for the heading */
+    }
+
+    .coucou .takeaways ul {
+        font-size: 1.4rem; /* Smaller font size for list items */
+    }
+
+    .coucou .takeaways li {
+        font-size: 1.4rem; /* Reduce font size for list items */
+    }
+}
+
+/* Small screens (up to 480px) */
+@media screen and (max-width: 480px) {
+    .coucou .takeaways {
+        width: 100%; /* Full width on very small screens */
+        padding: 1rem; /* Further reduce padding */
+    }
+
+    .coucou .takeaways b {
+        font-size: 1.8rem; /* Further reduce font size for the heading */
+    }
+
+    .coucou .takeaways ul {
+        font-size: 1.2rem; /* Smaller font size for list items */
+    }
+
+    .coucou .takeaways li {
+        font-size: 1.2rem; /* Further reduce font size for list items */
+    }
+}

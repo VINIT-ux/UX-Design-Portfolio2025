@@ -1,0 +1,585 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Instrument Sans;
+    /* background-color: var(--primary-1); */
+}
+
+/* Root Variables */
+:root {
+    --primary-1: #FFFCF4;
+    --primary-2: #FFFAED;
+    --secondary-color: #10375C;
+    --c1: #EB8317;
+    --c2: #F3C623;
+    --white: #FFFFFF;
+    --black: #0E0E0E;
+    --primary-font: Instrument Sans;
+    --font-size: 1.5rem;
+}
+.ga {
+    position: absolute; /* Use absolute positioning */
+    top: 5%; /* Adds top margin */
+    left: 50%; /* Centers horizontally */
+    transform: translateX(-50%); /* Centers by shifting left by 50% of its width */
+    width: 100%; /* Adjust width for smaller screens */
+    max-width: 800px; /* Optional max-width for larger screens */
+    height: auto; /* Adjust height based on content */
+    min-height: 80vh; /* Ensures a minimum height for balance */
+    text-align: left; /* Keeps content left-aligned */
+    margin: 0 auto; /* Adds horizontal centering and vertical spacing */
+}
+
+/* Container for the title and content */
+.ga .title {
+    width: 100%; /* Adjust width for better responsiveness */
+    margin-left: 0; /* Reset left margin for smaller screens */
+    margin-top: 20px; /* Add top margin */
+}
+
+/* Style for the main title paragraph */
+.ga .title p {
+    font-family: IBM Plex Mono, monospace; /* Monospace font for the text */
+    font-size: 2.5rem; /* Adjust font size for smaller screens */
+    line-height: 1.4; /* Adjust line spacing for readability */
+    color: var(--secondary-color); /* Primary text color from root variables */
+    text-align: left; /* Keep left-aligned */
+    margin-bottom: 1rem; /* Add more spacing below the paragraph */
+}
+
+/* Style for the "for foodies" part */
+.ga .title p span {
+    display: block; /* Places "for foodies" on a new line */
+    font-family: IBM Plex Mono, monospace; /* Accent font */
+    color: var(--secondary-color); /* Accent color */
+    font-weight: bold; /* Makes the text bold */
+    font-size: 4rem; /* Adjust font size for smaller screens */
+    margin-top: -0.5rem; /* Adjust spacing above "for foodies" */
+    text-align: left; /* Ensure it is also centered */
+}
+
+/* Scope styling for the Full-Time Role box */
+.ga .scope {
+    display: flex; /* Aligns items in a row */
+    align-items: left; /* Vertically aligns items */
+    justify-content: flex-start; /* Centers content horizontally */
+    padding: 1rem; /* Adds spacing inside the box */
+    background-color: var(--white); /* Background color */
+    box-shadow: 6px 6px 0px var(--black); /* Subtle shadow for depth */
+    width: fit-content; /* Adjusts size to content */
+    margin: 0; /* Centers box horizontally */
+    border: 0.1rem solid var(--black);
+    gap: 1rem; /* Adds gap between logo and text */
+}
+
+/* Styling for the logo */
+.ga .scope .logo {
+    width: 64px; /* Fixed width */
+    height: 64px; /* Fixed height */
+}
+
+/* Style for the text inside the scope */
+.ga .scope p {
+    font-weight: 500;
+    font-size: var(--font-size); /* Adjust text size */
+    color: var(--secondary-color); /* Text color */
+    margin: 0; /* Removes default paragraph margin */
+    display: flex; /* To align the text with the dot */
+    align-items: center; /* Centers text and dot vertically */
+    text-align: left;
+    gap: 1rem;
+}
+
+/* Styling for the dot between "Full-Time Role" and "FY 2024-25" */
+.ga .scope .dot {
+    display: inline-block; /* Ensures it's treated like a character */
+    width: 0.5rem; /* Dot diameter */
+    height: 0.5rem; /* Dot diameter */
+    background-color: var(--secondary-color); /* Matches the text color */
+    border-radius: 50%; /* Makes the dot circular */
+    margin: 0 0.5rem; /* Adds spacing around the dot */
+}
+
+/* Responsive Styling */
+@media screen and (max-width: 768px) {
+    .ga {
+        padding: 0 6%; /* Add padding for responsiveness */
+    }
+
+    .ga .title p {
+        font-size: 2rem; /* Reduce font size for medium screens */
+    }
+
+    .ga .title p span {
+        font-size: 3rem; /* Adjust font size for smaller screens */
+    }
+
+    .ga .scope {
+        width: 100%; /* Full width on smaller screens */
+        justify-content: center; /* Center the content */
+        gap: 0.8rem; /* Reduced gap between logo and text */
+        padding: 0.8rem; /* Slightly reduced padding */
+    }
+
+    .ga .scope p {
+        font-size: calc(var(--font-size) * 0.9); /* Reduce font size for medium screens */
+    }
+
+    .ga .scope .logo {
+        width: 48px; /* Smaller logo size */
+        height: 48px; /* Smaller logo size */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .ga .title p {
+        font-size: 1.8rem; /* Further reduce font size */
+    }
+
+    .ga .title p span {
+        font-size: 2.5rem; /* Smaller font for span */
+    }
+
+    .ga .scope {
+        padding: 0.5rem; /* Reduce padding inside the box */
+    }
+
+    .ga .scope p {
+        font-size: 1.2rem; /* Smaller font size */
+    }
+
+    .ga .scope .logo {
+        width: 40px; /* Compact logo size */
+        height: 40px; /* Compact logo size */
+    }
+}
+
+.ga .des p {
+    font-family: Instrument Sans;
+    padding-top: 2rem;
+    font-size: var(--font-size); /* Adjust font size */
+    color: var(--secondary-color); /* Use secondary color */
+    line-height: 1.4; /* Increase line spacing for readability */
+    max-width: 800px; /* Limits the paragraph width */
+    margin: 0; /* Centers the paragraph */
+    text-align: left; /* Ensures the text remains left-aligned */
+}
+.ga .des b {
+    font-size: var(--font-size); /* Increases font size */
+    color: var(--secondary-color); /* Optional: Apply a specific color */
+}
+.foodicons{
+    display: flex;
+    margin-top: 2rem;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.foodicons img{
+    width: 242px;
+    height: 242px;
+}
+
+.dotted-line {
+    height: 2px; /* Height of the line */
+    background: repeating-linear-gradient(
+        to right,
+        var(--secondary-color) 0,
+        var(--secondary-color) 2px,
+        transparent 2px,
+        transparent 10px
+    );
+    margin: 3rem 0 0 0; /* Adds top margin only */
+}
+.intro {
+    width: 80%; /* Adjust width as needed */
+    font-family: var(--primary-font); /* Replace with your font */
+    font-size: var(--font-size); /* Base font size */
+    line-height: 1.4; /* Improves readability */
+    color: var(--secondary-color); /* Base text color */
+    margin: 0 auto; /* Center align the intro section */
+}
+
+.intro ul {
+    list-style-type: disc; /* Adds bullet points */
+    padding-left: 2rem; /* Indents the list */
+}
+
+.intro ul li {
+    margin-bottom: 1rem; /* Adds spacing between list items */
+}
+
+.intro ul li span {
+    font-weight: bold; /* Makes "For the home cooks" and "For food lovers" bold */
+    font-size: var(--font-size);
+    color: var(--c1); /* Applies the --c1 color */
+}
+
+/* Responsive Styling */
+@media screen and (max-width: 768px) {
+    .intro {
+        width: 90%; /* Increase width to fill more screen space */
+        font-size: 1.8rem; /* Adjust font size for readability on medium screens */
+    }
+
+    .intro ul {
+        padding-left: 1.5rem; /* Reduce list padding for smaller screens */
+    }
+
+    .intro ul li span {
+        font-size: 1.6rem; /* Adjust font size for spans */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .intro {
+        width: 100%; /* Full width for smaller screens */
+        font-size: 1.6rem; /* Smaller font size for compact devices */
+    }
+
+    .intro ul {
+        padding-left: 1rem; /* Reduce padding even more for very small screens */
+    }
+
+    .intro ul li {
+        margin-bottom: 0.8rem; /* Decrease spacing between items */
+    }
+
+    .intro ul li span {
+        font-size: 1.4rem; /* Compact font size for spans */
+    }
+}
+
+.highlights {
+    width: 80%; /* Adjusts the container width */
+    font-family: var(--primary-font); /* Replace with your desired font */
+    font-size: var(--font-size); /* Adjust text size */
+    line-height: 1.4; /* Improves spacing between lines */
+    color: var(--secondary-color); /* Base text color */
+    margin: 0 auto; /* Centers the highlights container */
+}
+
+.highlights ul {
+    list-style-type: disc; /* Adds bullet points */
+    padding-left: 2rem; /* Indents the list */
+}
+
+.highlights ul li {
+    margin-bottom: 1rem; /* Adds spacing between list items */
+}
+
+.highlights ul li b {
+    font-weight: bold; /* Makes bold text stand out */
+    color: var(--primary-color); /* Optional: Use primary color for bold text */
+}
+
+/* Responsive Styling */
+@media screen and (max-width: 768px) {
+    .highlights {
+        width: 90%; /* Increase width to fill more screen space */
+        font-size: 1.8rem; /* Adjust font size for readability on medium screens */
+    }
+
+    .highlights ul {
+        padding-left: 1.5rem; /* Reduce padding for smaller screens */
+    }
+
+    .highlights ul li {
+        margin-bottom: 0.9rem; /* Adjust spacing for medium screens */
+    }
+
+    .highlights ul li b {
+        font-size: 1.8rem; /* Adjust font size for bold text */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .highlights {
+        width: 100%; /* Full width for compact screens */
+        font-size: 1.6rem; /* Adjust font size for smaller screens */
+    }
+
+    .highlights ul {
+        padding-left: 1rem; /* Reduce padding further for very small screens */
+    }
+
+    .highlights ul li {
+        margin-bottom: 0.8rem; /* Compact spacing for list items */
+    }
+
+    .highlights ul li b {
+        font-size: 1.4rem; /* Compact size for bold text */
+    }
+}
+
+.ga .ui-des{
+    width: 100%; /* Full width for responsiveness */
+    max-width: 800px; /* Optional max-width for larger screens */
+    margin-top: 0;
+    padding: 0;
+}
+
+.ga .ui-des p{
+    padding: 0;
+    margin-top: 0;
+    font-size: var(--font-size);
+    color: var(--secondary-color);
+}
+.ga .descp{
+    width: 100%; /* Full width for responsiveness */
+    max-width: 800px; /* Optional max-width for larger screens */
+    margin-top: 1rem;
+    padding: 0;
+}
+.ga .descp b{
+    font-size: 2.4rem;
+    color: var(--c1);
+}
+.ga .descp p{
+    padding-top: 1rem;
+    margin-top: 0;
+    font-size: var(--font-size);
+}
+.descp img {
+    display: inline-block;
+    justify-self: start;
+    align-items: flex-start;
+    margin-top: 1rem;
+    width: 100%; /* Full width by default for responsiveness */
+    max-width: 800px; /* Restrict maximum width */
+    height: auto; /* Maintain aspect ratio */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effects */
+}
+
+/* Media Queries for Responsiveness */
+
+/* Medium screens (up to 768px) */
+@media screen and (max-width: 768px) {
+    .descp img {
+        max-width: 90%; /* Reduce width for medium screens */
+        margin-top: 0.8rem; /* Adjust margin */
+    }
+}
+
+/* Small screens (up to 480px) */
+@media screen and (max-width: 480px) {
+    .descp img {
+        max-width: 100%; /* Full width for smaller screens */
+        margin-top: 0.5rem; /* Adjust margin further */
+    }
+}
+
+.ga .descp .imgheader b{
+    font-size: var(--font-size);
+    color: var(--secondary-color);
+}
+.descp .mainscreenimg p{
+    font-size: 1.0rem;
+    font-style: italic;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+.descp .lr b {
+    display: flex;
+    font-size: var(--font-size);
+    color: var(--secondary-color);
+    margin-bottom: 1rem;
+}
+.descp .lr ul li{
+    font-size: var(--font-size);
+    color: var(--secondary-color);
+    margin-bottom: 1rem;
+    margin-left: 1.5rem;
+    max-width: 800px;
+}
+.descp .ei p{
+    padding-top: 2rem;
+    font-size: 1.6rem;
+    font-style: italic;
+    font-weight: 500;
+}
+
+.descp .ei b{
+    font-size: 2.4rem;
+    color: var(--secondary-color);
+}
+
+.ga .challenges {
+    display: inline-block;
+    align-items: flex-start;
+    justify-content: flex-start;
+    width: 100%; /* Full width for responsiveness */
+    max-width: 800px; /* Limit the maximum width */
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+    background-color: var(--white);
+    box-shadow: 0px 0px 0 var(--black);
+    border: 0.1rem solid var(--c1);
+    padding: 2rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effects */
+}
+
+.ga .challenges:hover {
+    box-shadow: 6px 6px 0 var(--c1);
+}
+
+.ga .challenges b {
+    margin-bottom: 1rem;
+    font-size: 2.4rem; /* Default font size */
+    color: var(--c1);
+    background-color: var(--white);
+}
+
+.ga .challenges ul {
+    display: grid;
+    justify-content: flex-start;
+    align-items: flex-start;
+    font-size: var(--font-size);
+    font-weight: 400;
+    margin-top: 1rem;
+    list-style-type: disc; /* Adds bullet points */
+    padding-left: 2rem; /* Indents the list */
+}
+
+.ga .challenges li {
+    font-weight: 400;
+    text-align: left;
+    font-size: 1.6rem; /* Default font size */
+    margin-bottom: 1rem;
+    color: var(--secondary-color);
+}
+
+/* Media Queries for Responsiveness */
+
+/* Medium screens (up to 768px) */
+@media screen and (max-width: 768px) {
+    .ga .challenges {
+        padding: 1.5rem; /* Reduce padding for medium screens */
+        max-width: 90%; /* Shrink max width for better fit */
+    }
+
+    .ga .challenges b {
+        font-size: 2rem; /* Adjust font size for medium screens */
+    }
+
+    .ga .challenges ul {
+        font-size: 1.4rem; /* Adjust font size for medium screens */
+        padding-left: 1.5rem; /* Reduce padding for better alignment */
+    }
+
+    .ga .challenges li {
+        font-size: 1.4rem; /* Smaller text size */
+    }
+}
+
+/* Small screens (up to 480px) */
+@media screen and (max-width: 480px) {
+    .ga .challenges {
+        padding: 1rem; /* Compact padding */
+        max-width: 100%; /* Full width for small screens */
+    }
+
+    .ga .challenges b {
+        font-size: 1.8rem; /* Further adjust font size */
+    }
+
+    .ga .challenges ul {
+        font-size: 1.2rem; /* Smaller font size for better readability */
+        padding-left: 1rem; /* Reduce padding further */
+    }
+
+    .ga .challenges li {
+        font-size: 1.2rem; /* Adjust font size for small screens */
+    }
+}
+
+.ga .takeaways {
+    display: inline-block;
+    align-items: flex-start;
+    justify-content: flex-start;
+    width: 100%; /* Full width for responsiveness */
+    max-width: 800px; /* Limit maximum width */
+    margin-top: 0.01rem;
+    margin-bottom: 2rem;
+    background-color: var(--white);
+    box-shadow: 0px 0px 0 var(--c2);
+    border: 0.1rem solid var(--c2);
+    padding: 2rem; /* Default padding */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effects */
+}
+
+.ga .takeaways:hover {
+    box-shadow: 6px 6px 0 var(--c2);
+}
+
+.ga .takeaways b {
+    margin-bottom: 1rem;
+    font-size: 2.4rem; /* Default font size */
+    color: var(--secondary-color);
+    background-color: var(--white);
+}
+
+.ga .takeaways ul {
+    display: grid;
+    justify-content: flex-start;
+    align-items: flex-start;
+    font-size: var(--font-size);
+    font-weight: 400;
+    margin-top: 1rem;
+    list-style-type: disc; /* Adds bullet points */
+    padding-left: 2rem; /* Indents the list */
+}
+
+.ga .takeaways li {
+    font-weight: 400;
+    text-align: left;
+    margin-bottom: 1rem;
+    font-size: var(--font-size);
+    color: var(--secondary-color);
+}
+
+/* Media Queries for Responsiveness */
+
+/* Medium screens (up to 768px) */
+@media screen and (max-width: 768px) {
+    .ga .takeaways {
+        padding: 1.5rem; /* Reduce padding for medium screens */
+        max-width: 90%; /* Shrink max width */
+    }
+
+    .ga .takeaways b {
+        font-size: 2rem; /* Adjust font size for medium screens */
+    }
+
+    .ga .takeaways ul {
+        font-size: 1.4rem; /* Adjust font size for medium screens */
+        padding-left: 1.5rem; /* Reduce padding */
+    }
+
+    .ga .takeaways li {
+        font-size: 1.4rem; /* Adjust font size */
+    }
+}
+
+/* Small screens (up to 480px) */
+@media screen and (max-width: 480px) {
+    .ga .takeaways {
+        padding: 1rem; /* Compact padding */
+        max-width: 100%; /* Full width for small screens */
+    }
+
+    .ga .takeaways b {
+        font-size: 1.8rem; /* Further adjust font size */
+    }
+
+    .ga .takeaways ul {
+        font-size: 1.2rem; /* Smaller font size */
+        padding-left: 1rem; /* Reduce padding further */
+    }
+
+    .ga .takeaways li {
+        font-size: 1.2rem; /* Adjust font size for small screens */
+    }
+}

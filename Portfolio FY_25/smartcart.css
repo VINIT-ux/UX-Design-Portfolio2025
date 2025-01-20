@@ -1,0 +1,456 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Instrument Sans;
+    /* background-color: var(--primary-1); */
+}
+
+/* Root Variables */
+:root {
+    --primary-1: #FFFCF4;
+    --primary-2: #FFFAED;
+    --secondary-color: #10375C;
+    --c1: #EB8317;
+    --c2: #F3C623;
+    --white: #FFFFFF;
+    --black: #0E0E0E;
+    --primary-font: Instrument Sans;
+    --font-size: 1.5rem;
+}
+.smartcart {
+    position: absolute; /* Use absolute positioning */
+    top: 5%; /* Adds top margin */
+    left: 50%; /* Centers horizontally */
+    transform: translateX(-50%); /* Centers by shifting left by 50% of its width */
+    width: 100%; /* Adjust width for smaller screens */
+    max-width: 800px; /* Optional max-width for larger screens */
+    height: auto; /* Adjust height based on content */
+    min-height: 80vh; /* Ensures a minimum height for balance */
+    text-align: left; /* Keeps content left-aligned */
+    margin: 0 auto; /* Adds horizontal centering and vertical spacing */
+}
+
+/* Responsive Adjustments */
+@media screen and (max-width: 768px) {
+    .smartcart {
+        top: 0; /* Remove top margin for smaller screens */
+        width: 90%; /* Set width to 90% to adjust for smaller screens */
+        max-width: 700px; /* Reduce the max-width on medium screens */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .smartcart {
+        top: 0; /* Remove top margin for mobile screens */
+        width: 100%; /* Set width to 100% on mobile for better utilization of screen */
+        max-width: 100%; /* Remove the max-width constraint on mobile */
+        min-height: 70vh; /* Adjust the minimum height on mobile */
+        padding: 1rem; /* Add some padding to make the layout more comfortable */
+    }
+}
+
+
+/* Container for the title and content */
+.smartcart .title {
+    width: 100%; /* Adjust width for better responsiveness */
+    margin-left: 0; /* Reset left margin for smaller screens */
+    margin-top: 20px; /* Add top margin */
+}
+
+/* Style for the main title paragraph */
+.smartcart .title p {
+    font-family: IBM Plex Mono, monospace; /* Monospace font for the text */
+    font-size: 2.5rem; /* Adjust font size for smaller screens */
+    line-height: 1.4; /* Adjust line spacing for readability */
+    color: var(--secondary-color); /* Primary text color from root variables */
+    text-align: left; /* Keep left-aligned */
+    margin-bottom: 1rem; /* Add more spacing below the paragraph */
+}
+
+/* Style for the "for foodies" part */
+.smartcart .title p span {
+    display: block; /* Places "for foodies" on a new line */
+    font-family: IBM Plex Mono, monospace; /* Accent font */
+    color: var(--secondary-color); /* Accent color */
+    font-weight: bold; /* Makes the text bold */
+    font-size: 4rem; /* Adjust font size for smaller screens */
+    margin-top: -0.5rem; /* Adjust spacing above "for foodies" */
+    text-align: left; /* Ensure it is also centered */
+}
+
+/* Style for the "everyday" part */
+.everyday p span {
+    display: block; /* Places "for foodies" on a new line */
+    font-family: IBM Plex Mono, monospace; /* Accent font */
+    color: var(--c1); /* Accent color */
+    font-weight: bold; /* Makes the text bold */
+    margin-top: 0.4rem;
+    font-size: 4rem; /* Increases the font size for emphasis */
+    margin-top: -1.5rem; /* Adds spacing above "for foodies" */
+    text-align: left; /* Ensure it is also centered */
+}
+
+/* Responsive Adjustments */
+@media screen and (max-width: 768px) {
+    .smartcart .title p {
+        font-size: 2rem; /* Adjust font size for medium screens */
+    }
+
+    .smartcart .title p span {
+        font-size: 3rem; /* Adjust font size for smaller screens */
+    }
+
+    .everyday p span {
+        font-size: 3.5rem; /* Adjust font size for smaller screens */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .smartcart .title p {
+        font-size: 1.8rem; /* Adjust font size for mobile */
+    }
+
+    .smartcart .title p span {
+        font-size: 2.8rem; /* Adjust font size for mobile */
+    }
+
+    .everyday p span {
+        font-size: 3.2rem; /* Adjust font size for mobile */
+    }
+}
+
+.smartcart .intro {
+    display: flex;
+    padding-top: 2rem;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row; /* Stack elements vertically on smaller screens */
+    text-align: center; /* Center the text on smaller screens */
+}
+
+.smartcart .intro img {
+    width: 232px;
+    height: auto;
+    margin-bottom: 1rem; /* Add spacing between image and text */
+}
+
+.smartcart .intro p {
+    font-family: Instrument Sans;
+    font-style: italic;
+    font-size: 1.4rem; /* Adjust font size */
+    color: var(--secondary-color); /* Use secondary color */
+    line-height: 1.4; /* Increase line spacing for readability */
+    max-width: 800px; /* Limits the paragraph width */
+    margin: 0; /* Centers the paragraph */
+    text-align: left; /* Ensures the text remains left-aligned */
+}
+
+/* Responsive Adjustments */
+@media screen and (max-width: 768px) {
+    .smartcart .intro {
+        flex-direction: column; /* Stack the image and paragraph vertically */
+        text-align: center; /* Center text for smaller screens */
+    }
+
+    .smartcart .intro img {
+        width: 60%; /* Scale the image on smaller screens */
+    }
+
+    .smartcart .intro p {
+        font-size: 1.2rem; /* Reduce font size on smaller screens */
+        max-width: 90%; /* Allow more width for the text on small screens */
+        line-height: 1.6; /* Increase line spacing slightly */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .smartcart .intro img {
+        width: 80%; /* Further scale down the image for mobile */
+    }
+
+    .smartcart .intro p {
+        font-size: 1rem; /* Further reduce the font size on very small screens */
+        max-width: 90%; /* Keep the paragraph width responsive */
+    }
+}
+
+
+.smartcart .problem {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+    margin-top: 2rem;
+}
+
+/* Style for the bold text inside problem */
+.smartcart .problem b {
+    font-size: var(--font-size); /* Increases font size */
+    color: var(--secondary-color); /* Optional: Apply a specific color */
+}
+
+.smartcart .problemicons {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100%;
+    height: auto;
+    flex-direction: column;
+    margin-bottom: 1rem;
+}
+
+.smartcart .problem p {
+    font-family: Instrument Sans;
+    font-size: var(--font-size); /* Adjust font size */
+    color: var(--secondary-color); /* Use secondary color */
+    line-height: 1.4; /* Increase line spacing for readability */
+    max-width: 800px; /* Limits the paragraph width */
+    margin: 0; /* Centers the paragraph */
+    text-align: left; /* Ensures the text remains left-aligned */
+}
+
+.dotted-line {
+    height: 2px; /* Height of the line */
+    background: repeating-linear-gradient(
+        to right,
+        var(--secondary-color) 0,
+        var(--secondary-color) 2px,
+        transparent 2px,
+        transparent 10px
+    );
+    margin: 3rem 0 0 0; /* Adds top margin only */
+}
+.ui {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column; /* Stack items vertically by default */
+    width: 100%; /* Adjust width for better responsiveness */
+    max-width: 800px; /* Optional max-width for larger screens */
+    height: auto;
+}
+
+/* .uiscreens container */
+.ui .uiscreens img {
+    display: inline-block;
+    margin-top: 1rem;
+    max-width: 100%; /* Ensure images scale responsively */
+    height: auto;
+}
+.ui .uiscreens .cartimg{
+    display: inline-block;
+    margin-top: 1rem;
+    max-width: 100%; /* Ensure images scale responsively */
+    height: auto;
+}
+
+/* Responsive Adjustments */
+@media screen and (max-width: 768px) {
+    .ui {
+        width: 90%; /* Set width to 90% for medium screens */
+        max-width: 700px; /* Reduce max-width for medium screens */
+    }
+
+    .ui .uiscreens img {
+        margin-top: 1rem;
+        max-width: 100%; /* Images will take up the full width available */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .ui {
+        width: 100%; /* Set width to 100% on mobile for full utilization */
+        max-width: 100%; /* No max-width for mobile */
+        padding: 1rem; /* Add padding for mobile */
+    }
+
+    .ui .uiscreens img {
+        margin-top: 0.8rem; /* Adjust image margin for mobile */
+        max-width: 100%; /* Make images responsive */
+    }
+}
+
+
+.smartcart .scene b{
+    font-size: var(--font-size); /* Increases font size */
+    color: var(--secondary-color); /* Optional: Apply a specific color */
+}
+
+.smartcart .scene b span{
+    color: var(--c1);
+}
+.smartcart .scene img {
+    display: block; /* Switch to block for better alignment */
+    margin-top: 2rem; /* Adjust margin for better spacing */
+    max-width: 100%; /* Ensure the image scales responsively */
+    height: auto; /* Maintain aspect ratio */
+}
+
+/* Responsive Adjustments */
+@media screen and (max-width: 768px) {
+    .smartcart .scene img {
+        margin-top: 1.5rem; /* Adjust top margin for medium screens */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .smartcart .scene img {
+        margin-top: 1rem; /* Further reduce margin for mobile */
+    }
+}
+
+.smartcart .scene .girlbio {
+    margin-top: 1rem;
+    font-size: var(--font-size);
+    color: var(--secondary-color);
+    text-align: justify;
+}
+
+.smartcart .scene .girlbio span {
+    color: var(--c1);
+    font-weight: bold;
+}
+
+.smartcart .research b {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding-top: 2rem;
+    font-size: 2.4rem; /* Increases font size */
+    color: var(--secondary-color); /* Optional: Apply a specific color */
+}
+
+.smartcart .research .points p {
+    font-size: var(--font-size);
+    color: var(--secondary-color);
+    font-family: Instrument Sans;
+    font-weight: 500;
+}
+
+.smartcart .research .points ul {
+    list-style-type: disc; /* Adds bullet points */
+    padding-left: 2rem; /* Indents the list */
+}
+
+.points li {
+    font-weight: 500; /* Makes "For the home cooks" and "For food lovers" bold */
+    font-size: var(--font-size);
+    color: var(--c1); /* Applies the --c2 color */
+}
+
+.obser ul li {
+    color: var(--secondary-color);
+}
+
+.smartcart .solution b {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    font-size: 2.4rem;
+    margin-top: 2rem;
+}
+
+.solution .points p {
+    font-family: Instrument Sans;
+    font-size: var(--font-size);
+}
+
+.solution ul {
+    list-style-type: disc; /* Adds bullet points */
+    padding-left: 2rem; /* Indents the list */
+}
+
+.solution ul li {
+    color: var(--secondary-color);
+}
+
+.smartcart .userflow b {
+    margin-bottom: 1rem;
+    font-size: var(--font-size);
+}
+
+.smartcart .working span b {
+    font-size: var(--font-size);
+}
+
+.smartcart .working ul b {
+    margin-bottom: 1rem;
+    font-size: var(--font-size);
+}
+
+.smartcart .working ul li {
+    margin-left: 1rem;
+    font-size: var(--font-size);
+}
+
+.smartcart .benefits b {
+    margin-bottom: 1rem;
+}
+
+/* Responsive Adjustments */
+@media screen and (max-width: 768px) {
+    .smartcart .scene .girlbio {
+        font-size: 1.6rem; /* Adjust font size for smaller screens */
+    }
+
+    .smartcart .research b,
+    .smartcart .solution b {
+        font-size: 2rem; /* Adjust font size for medium screens */
+    }
+
+    .smartcart .research .points p,
+    .solution .points p,
+    .smartcart .working span b {
+        font-size: 1.6rem; /* Adjust font size for smaller screens */
+    }
+
+    .smartcart .working ul li {
+        font-size: 1.5rem; /* Adjust font size for working list */
+    }
+
+    .points li {
+        font-size: 1.6rem; /* Adjust font size for points list */
+    }
+
+    .smartcart .userflow b {
+        font-size: 1.6rem; /* Adjust font size for userflow */
+    }
+
+    .smartcart .benefits b {
+        font-size: 1.6rem; /* Adjust font size for benefits */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .smartcart .scene .girlbio {
+        font-size: 1.4rem; /* Further adjust font size for mobile */
+    }
+
+    .smartcart .research b,
+    .smartcart .solution b {
+        font-size: 1.8rem; /* Further reduce font size for mobile */
+    }
+
+    .smartcart .research .points p,
+    .solution .points p,
+    .smartcart .working span b {
+        font-size: 1.4rem; /* Further reduce font size */
+    }
+
+    .smartcart .working ul li {
+        font-size: 1.3rem; /* Further reduce font size */
+    }
+
+    .points li {
+        font-size: 1.4rem; /* Further reduce font size */
+    }
+
+    .smartcart .userflow b {
+        font-size: 1.4rem; /* Adjust font size for userflow */
+    }
+
+    .smartcart .benefits b {
+        font-size: 1.4rem; /* Adjust font size for benefits */
+    }
+}
