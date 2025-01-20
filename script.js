@@ -57,3 +57,23 @@ document.addEventListener('DOMContentLoaded', () => {
         document.body.removeChild(downloadLink);
     });
 });
+// Wait for the DOM to fully load
+document.addEventListener('DOMContentLoaded', () => {
+    // Select the button using its ID
+    const cvButton = document.getElementById('download-cv');
+    
+    // Add a click event listener to the button
+    cvButton.addEventListener('click', () => {
+        // Create a temporary anchor element for the download
+        const downloadLink = document.createElement('a');
+        
+        // Set the file path and filename
+        downloadLink.href = 'path/to/your-cv.pdf'; // Replace with the actual path to your CV file
+        downloadLink.download = 'Vinit-CV.pdf'; // Replace with your desired file name
+        
+        // Append the anchor to the body, click it to start the download, and remove it
+        document.body.appendChild(downloadLink);
+        downloadLink.click();
+        document.body.removeChild(downloadLink);
+    });
+});
