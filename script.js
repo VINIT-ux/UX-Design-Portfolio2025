@@ -67,8 +67,8 @@ document.addEventListener('DOMContentLoaded', () => {
             // Create a temporary anchor element for the download
             const downloadLink = document.createElement('a');
             
-            downloadLink.href = 'assests/M N VINIT_CV.pdf'; // Correct the folder name
-            downloadLink.download = 'Vinit-CV.pdf'; // Set the desired file name
+            downloadLink.href = 'cv/M N VINIT_CV.pdf'; // Correct the folder name
+            downloadLink.download = 'M N VINIT_CV.pdf'; // Set the desired file name
             
             // Append the anchor to the body, click it to start the download, and remove it
             document.body.appendChild(downloadLink);
