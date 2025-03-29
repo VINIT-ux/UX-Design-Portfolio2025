@@ -48,7 +48,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const downloadLink = document.createElement('a');
         
         // Set the file path and filename
-        downloadLink.href = 'cv/VINIT_Designer.pdf';
+        downloadLink.href = 'cv/VINIT_CV_DESIGNER.pdf';
         downloadLink.download = 'M N VINIT_Product Designer.pdf'; // Set the desired file name
         
         // Append the anchor to the body, click it to start the download, and remove it
@@ -67,7 +67,7 @@ document.addEventListener('DOMContentLoaded', () => {
             // Create a temporary anchor element for the download
             const downloadLink = document.createElement('a');
             
-            downloadLink.href = 'cv/VINIT_Designer.pdf'; // Correct the folder name
+            downloadLink.href = 'cv/VINIT_CV_DESIGNER.pdf'; // Correct the folder name
             downloadLink.download = 'M N VINIT_Product Designer.pdf'; // Set the desired file name
             
             // Append the anchor to the body, click it to start the download, and remove it
