@@ -1331,7 +1331,7 @@ h1 {
 }
 
 .paytm_cs img {
-    width: 880px; /* Default image width */
+    width: 456px; /* Default image width */
     height: auto; /* Maintain aspect ratio */
 }
 
